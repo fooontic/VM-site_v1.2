@@ -1,0 +1,12 @@
+{
+  "name": "vm-site",
+  "version": "0.0.0",
+  "homepage": "https://github.com/fooontic/VM-site",
+  "authors": [
+    "fooontic <fooontic@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT"
+}
