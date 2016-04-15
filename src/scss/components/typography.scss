@@ -1,0 +1,52 @@
+.link {
+	// display: inline-block;
+	text-decoration: none;
+	color: $link;
+	border-bottom: 1px solid fade-out($link, .6);
+	transition: all .4s;
+
+	&:hover{
+		color: $blue;
+		border-bottom: 1px solid fade-out($blue, .6);
+		transition: all .1s;
+		cursor: pointer;
+		text-decoration: none
+	}
+
+	&--white {
+		color: #fff;
+		border-bottom: 1px solid fade-out(#fff, .6);
+	}
+
+	&--white:hover {
+		color: lighten($blue, 15%);
+		border-bottom: 1px solid fade-out(lighten($blue, .1), .6);
+	}
+
+	&--pseudo {
+		border-bottom: 1px dashed fade-out($link, .6);
+
+		&--white:hover {
+			border-bottom: 1px dashed fade-out(lighten($link, .1), .6);
+		}
+	}
+
+
+	// &--black {
+	// 	color: #000;
+	// 	border-bottom: 1px solid fade-out(black, .6);
+
+	// 	&:hover {
+	// 		color: $red;
+	// 		border-bottom: 1px solid fade-out($red, 40%);
+	// 	}
+	// }
+
+}
+
+
+.h2 {
+	font-weight: 100;
+	font-size: $fz-35;
+	margin: .67em 0 .5em;
+}

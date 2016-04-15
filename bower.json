@@ -1,6 +1,6 @@
 {
   "name": "vm-site",
-  "version": "0.2.0",
+  "version": "1.2.0",
   "description": "Quik portfolio site",
   "homepage": "https://github.com/fooontic/VM-site",
   "authors": [
@@ -18,7 +18,8 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
+  "dependencies": {
+    "bootstrap": "4.0",
     "animate.css": "~3.4.0",
     "wow": "~1.1.2"
   }

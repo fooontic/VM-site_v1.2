@@ -19,18 +19,18 @@ var gulp = require('gulp'), // Task runner
 gulp.task('js', function () {
 	return streamqueue(
 		{ objectMode: true },
-		// gulp.src(pathTo.src.js).pipe(rigger()).pipe(size({title: 'JavaScript'})),
+		// gulp.src(pathTo.src.JS).pipe(rigger()).pipe(size({title: 'JavaScript'})),
 		gulp.src(config.pathTo.Src.JS).pipe(rigger()).pipe(jshint()).pipe(jshint.reporter(stylish)).pipe(size({title: 'JavaScript'}))
 	)
 		.pipe(concat(config.pathTo.Build.JSMainFile))
 		.pipe(sourcemaps.init())
-		.pipe(gulp.dest(config.pathTo.Build.js))
+		.pipe(gulp.dest(config.pathTo.Build.JS))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('./'))
 		.pipe(size({
 			title: 'Total JavaScript'
 		}))
-		.pipe(gulp.dest(config.pathTo.Build.js))
+		.pipe(gulp.dest(config.pathTo.Build.JS))
 		.pipe(reload({stream: true}));
 });

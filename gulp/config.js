@@ -3,7 +3,7 @@ module.exports = {
 	/* Path settings */
 	pathTo: {
 		Src: { // Set source paths
-			Styles: 'src/scss/main.scss',
+			Styles: 'src/scss/**/*.scss',
 			MainStyleFile: 'src/scss/main.scss',
 			Jade: 'src/jade/**/*.jade',
 			JS: 'src/js/main.js',
@@ -15,7 +15,7 @@ module.exports = {
 			Styles: 'dist/css',
 			Html: 'dist/',			
 			Images: 'dist/img/',
-			Js: 'dist/js/',
+			JS: 'dist/js/',
 			JSMainFile: 'main.js',
 			Clean: ['dist/**/*', '!dist/.gitignore'],
 			Txt: 'dist/'

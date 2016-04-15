@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+///// BOOTSTRAP /////
+
+@import "vendor/bootstrap.scss";
+
+
+///// CSS /////
+
+// @import "../css/animate.css";
+// @import "../css/likely.css";
+// @import "../css/jquery.countup.css";
+
+
+// CORE 
+@import "components/variables";
+
+
+@import "components/my-scaffoldings";
+@import "components/grid";
+@import "components/typography";
+
+@import "components/adds";
+@import "components/social-icons";
+
+
+@import "components/header";
+@import "components/supheader";
+@import "components/footer";
+@import "components/repair";
+@import "components/countup";
+@import "components/projects";
+@import "components/about";
+
+
+
+
+
+
+
+
+
+
+///// Projects /////
