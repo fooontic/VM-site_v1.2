@@ -5,12 +5,13 @@
 	border-bottom: 1px solid fade-out($link, .6);
 	transition: all .4s;
 
-	&:hover{
+	&:hover, &:focus{
 		color: $blue;
 		border-bottom: 1px solid fade-out($blue, .6);
 		transition: all .1s;
 		cursor: pointer;
-		text-decoration: none
+		text-decoration: none;
+		outline: none;
 	}
 
 	&--white {

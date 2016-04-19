@@ -1,7 +1,7 @@
 .footer {
 	color: $gray;
-	margin: 100px 0 0;
-	border-top: 1px solid fade($gray, 15%);
+	// margin: 100px 0 0;
+	border-top: 1px solid fade-out($gray, .85);
 	padding: 20px 0 10px;
 }
 

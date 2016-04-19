@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="ru")
+	
+	head
+		:verbatim
+		include ../mixins/head.jade
+		+head('Дизайн списка покупок для Android — Вадик Матвеев', 'nested')
+
+	body.whatobuy
+
+		:verbatim
+		include ../mixins/header.jade
+		+header('nested')
+
+		section.whatobuy__promo.white
+			.container-fluid
+				.row.relative
+					.col-xs-12.col-md-7.offset
+
+						img.whatobuy__logo.img-fluid(src="../img/whatobuy__logo.png", alt="")
+
+					.col-xs-12.col-md-4
+						
+						.whatobuy__video-inner
+							video(autoplay="" loop="" muted="" poster="../video/whatobuy.png")
+								source(src="../video/whatobuy.webm" type="video/webm")
+								source(src="../video/whatobuy.mp4" type="video/mp4")
+					
+					.col-xs-12.col-md-7.offset
+						.row
+							.col-xs-12.col-lg-5
+								h3.project__subtitle Дизайн приложения для&nbsp;Android
+								p.project__year 2014
+							.col-xs-12.col-lg-7
+								p.project__flow Максимально простой список покупок для Android. Без категорий, наворотов и прочего. Основная цель была сократить количествово лишних кликов которыми страдают все популярные аналоги. Добавил — вычеркнул, добавил — вычеркнул. <br><br>
+									a.link(href="https://play.google.com/store/apps/details?id=ru.logomotiv.android.whattobuylite&hl=ru") Скачать из Google Play
+
+							.col-xs-12.col-md-5
+								p.project__madein.project__madein--logomotiv Проект выполнен в 
+									a.link(href="http://logomotivapp.ru/") Дизайн-&nbsp;студии Logomotiv
+							.col-xs-12.col-md-3
+								p.project__team Арт-директор: Иван&nbsp;Большов
+							.col-xs-12.col-md-3 
+								p.project__team Разработчик: Илья&nbsp;Мясоедов
+
+
+					
+
+
+		section.whatobuy__screens
+
+			p.whatobuy__screens-flow Больше 30 экранов.<br>Адаптировано под планшеты
+
+
+		:verbatim
+		include ../components/footer.jade

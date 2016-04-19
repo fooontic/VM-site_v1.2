@@ -17,7 +17,7 @@ module.exports = {
 			Images: 'dist/img/',
 			JS: 'dist/js/',
 			JSMainFile: 'main.js',
-			Clean: ['dist/**/*', '!dist/.gitignore'],
+			Clean: ['dist/**/*', '!dist/.gitignore', '!dist/video/*'],
 			Txt: 'dist/'
 		}
 	},

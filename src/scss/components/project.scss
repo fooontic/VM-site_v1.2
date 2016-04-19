@@ -1,0 +1,77 @@
+.project {
+
+	&__title {
+		font-size: 42px;
+		font-weight: 100;
+		margin-bottom: 0;
+	}
+	
+	&__subtitle {
+		font-size: $fz-21;
+		font-weight: 300;
+		margin: .67em 0 .5em;
+	}
+
+	&__h3 {
+		font-size: 36px;
+		font-weight: 100;
+	}
+
+	&__year {
+		font-size: $fz-12;
+		color: #6d6e70;
+		position: relative;
+		margin-top: 20px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 2px;
+			top: -10px;
+			left: 0;
+			background-color: #6d6e70;
+
+		}
+
+		@media 
+		(min-width: $screen-md-min) {
+			margin-top: 50px;
+		}
+	}
+
+	&__flow {
+		font-size: $fz-16;
+		margin: 48px 0 30px;
+	}
+
+	&__madein, &__team {
+		font-size: $fz-12;
+		line-height: 1.5;
+		margin: 48px 0 30px;
+	}
+
+	@media 
+		(min-width: $screen-md-min) {	
+		&__madein {
+			margin-bottom: 50px
+		}
+	}
+
+	&__madein--logomotiv {
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -20px;
+			left: 0;
+			width: 30px;
+			height: 15px;
+			background-image: url(../img/logomotiv__icon.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+
+}

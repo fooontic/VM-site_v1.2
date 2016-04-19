@@ -33,6 +33,7 @@
     "gulp-minify-css": "^1.2.1",
     "gulp-newer": "^1.1.0",
     "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.1.0",
     "gulp-prettify": "^0.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-rigger": "^0.5.8",
@@ -46,6 +47,8 @@
     "jshint": "^2.9.1-rc1",
     "jshint-stylish": "^2.1.0",
     "path": "^0.12.7 ",
+    "postcss-inline-svg": "^1.4.0",
+    "postcss-svgo": "^2.1.2",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
     "streamqueue": "^1.1.1"

@@ -2,11 +2,13 @@ doctype html
 html(lang="ru")
 	
 	head
-		title Дизайнер Вадик Матвеев
+		//- title Дизайнер Вадик Матвеев
 
 		:verbatim
-		include ./components/head.jade
+		include ./mixins/head.jade
+		+head('Дизайнер Вадик Матвеев', 'root')
 
+		link(href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css')
 	
 
 	body
@@ -26,7 +28,7 @@ html(lang="ru")
 
 		.container-fluid.about
 			.row
-				.col-xs-12.col-sm-6.col-md-4.col-md-offset-1
+				.col-xs-12.col-sm-6.col-md-5
 					h2.h2 Последнее в 
 						a.link(href="http://fooontic.tumblr.com/") блоге
 
@@ -43,7 +45,7 @@ html(lang="ru")
 						span.about__blog-date 26.05.15
 
 
-				.col-xs-12.col-sm-6.col-md-6
+				.col-xs-12.col-sm-6.col-md-7
 					h2.h2 О себе
 
 					.row
