@@ -1,0 +1,132 @@
+.dur-app {
+	
+	&__promo {
+		background-color: #dc516b;
+		padding: 50px 0;
+	}
+
+	&__promo-logo {
+
+		padding: 0 20%;
+		margin-bottom: 2em;
+
+		@media 
+		(min-width: $screen-md-min){
+			padding: 0 13%;
+			margin-top: 100px;
+		}
+	}
+
+	&__promo-img {
+		@media 
+		(min-width: $screen-md-min){
+			position: relative;
+			left: -23px;
+		}
+	}
+
+	&__video {
+		padding: 60px 0;
+	}
+
+
+	&__video video {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		// background-size: cover;
+		// background-repeat: no-repeat;
+		// background-position: center;
+	}
+
+
+	&__floataction {
+		background-color: #69c4a8;
+		padding: 100px 0;
+	}
+
+	&__floataction .project__h3 {
+		@media 
+		(min-width: $screen-lg-min){
+			margin-top: 60px;
+		}
+	}
+
+	&__floataction video {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		// background-size: cover;
+		// background-repeat: no-repeat;
+		// background-position: center;
+		// background-image: url(../video/dur__button.png);
+
+		// @media 
+		// (min-width: $screen-md-min){
+		// 	margin-top: 30%;
+		// }
+
+		@media 
+		(min-width: $screen-lg-min) {
+			margin-top: 0;
+		}
+	}
+
+	&__pads {
+		min-height: 100vw;
+		padding-top: 50px;
+		background-image: url(../img/dur-app__pads.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		@media 
+		(min-width: $screen-md-min){
+			min-height: 75vw;
+			padding-top: 100px;
+		}
+
+		@media 
+		(min-width: $screen-lg-min){
+			min-height: 52vw;
+			padding-top: 200px;
+		}
+	}
+
+	&__pads-flow {
+		background-color: fade-out(#69c4a8, .15);
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		padding: 20px 30px 22px;
+		font-size: 24px;
+		line-height: 1.3;
+		font-weight: 300;
+		color: #fff;
+
+		@media 
+		(min-width: $screen-md-min){
+			width: 400px;
+		}
+
+		@media 
+		(min-width: $screen-lg-min){
+			font-size: 36px;
+		}
+	}
+
+} 
+
+// .dur_recipe {
+// 	background-image: url(../video/dur__recipe.png);
+
+// }
+// .dur_menu {
+// 	background-image: url(../video/dur__menu.png);
+
+// }
+// .dur_add-recipe {
+// 	background-image: url(../video/dur__add-recipe.png);
+
+// }
+

@@ -13,56 +13,60 @@ body.dur-app
 
 	section.dur-app__promo
 		.container-fluid
-			img.img-(src="img/dur-app__promo.jpg", alt="")
+			.row
+				.col-xs-12.col-md-4
+					img.dur-app__promo-logo.img-fluid(src="../img/dur-app__logo.png", alt="")
+				.col-xs-12.col-md-8
+					img.dur-app__promo-img.img-fluid(src="../img/dur-app__tab-phone.jpg", alt="")
 
 
 	section.project
 		.container-fluid
 			.row
-				.col-xs-4
+				.col-xs-12.col-lg-4
 					h2.project__title Дюрецепты
 					h4.project__subtitle Дизайн приложения для&nbsp;Android
 
 					p.project__year 2014
-				.col-xs-6
+				.col-xs-12.col-sm-9.col-lg-7.col-xl-6
 					p.project__flow Задача стояла в адаптировании дизайна iOS приложения Дюрецепты для Android. При проектировании интерфейса рукодствовался принципами Google Material Design. Нарисовал две версии, для смартфонов и планшетов.<br><br>	Представленная версия является концептом и до конца еще не реализована. Выпущенная версия обладает меньшим функционалом.<br><br>
 						a.link(href="#") Скачать из Google Play
-				.col-xs-2
+				.col-xs-12.col-sm-3.col-xl-2
 					.project__madein.project__madein--logomotiv
 						p Проект выполнен в<br>
 							a.link(href="http://logomotivapp.ru/") Дизайн-&nbsp;студии Logomotiv
-						p Арт-директор: <br>Иван Большов		
-						p Менеджер: <br>Анна Шелковникова
+						p Арт-директор: Иван&nbsp;Большов		
+						p Менеджер: Анна&nbsp;Шелковникова
 
 	section.dur-app__video
 		.container-fluid
 			.row
-				.col-xs-4
-					video.dur_recipe(autoplay="" loop="" muted="" preload="none")
-						source(src="video/dur_recipe.webm" type="video/webm")
-						source(src="video/dur_recipe.mp4" type="video/mp4")
+				.col-xs-12.col-md-4
+					video.dur_recipe(autoplay="" loop="" muted="" poster="../video/dur__recipe.png")
+						source(src="../video/dur_recipe.webm" type="video/webm")
+						source(src="../video/dur_recipe.mp4" type="video/mp4")
 
-				.col-xs-4
-					video.dur_menu(autoplay="" loop="" muted="" preload="none")
-						source(src="video/dur_menu.webm" type="video/webm")
-						source(src="video/dur_menu.mp4" type="video/mp4")
+				.col-xs-12.col-md-4
+					video.dur_menu(autoplay="" loop="" muted="" poster="../video/dur__menu.png")
+						source(src="../video/dur_menu.webm" type="video/webm")
+						source(src="../video/dur_menu.mp4" type="video/mp4")
 
-				.col-xs-4
-					video.dur_add-recipe(autoplay="" loop="" muted="" preload="none")
-						source(src="video/dur_add-recipe.webm" type="video/webm")
-						source(src="video/dur_add-recipe.mp4" type="video/mp4")
+				.col-xs-12.col-md-4
+					video.dur_add-recipe(autoplay="" loop="" muted="" poster="../video/dur__add-recipe.png")
+						source(src="../video/dur_add-recipe.webm" type="video/webm")
+						source(src="../video/dur_add-recipe.mp4" type="video/mp4")
 
 
 	.dur-app__floataction
 		.container-fluid
 			.row
-				.col-xs-4.col-xs-offset-1
-					video(autoplay="" loop="" muted="" preload="none")
-						source(src="video/dur_button.webm" type="video/webm")
-						source(src="video/dur_button.mp4" type="video/mp4")
+				.col-xs-12.col-md-4.col-md-offset-1
+					video(preload="yes" width="100%" height="auto" autoplay controls="true" loop muted poster="../video/dur__button.png")
+						source(src="../video/dur_button.webm" type="video/webm")
+						source(src="../video/dur_button.mp4" type="video/mp4")
 
 
-				.col-xs-5.col-xs-offset-1.white
+				.col-xs-12.col-md-6.col-lg-5.col-lg-offset-1.white
 					h3.project__h3 Дело случая
 					p.project__flow На белково-овощной диете важно жестко следовать этапам. Рецептов много, но время читать и выбирать среди них бывает некогда. Кнопка «Случайный рецепт» помогает в таких случаях. Укажите этап диеты и приложение подкинет вам идею для обеда. 
 
@@ -79,4 +83,4 @@ body.dur-app
 
 
 	:verbatim
-	include ./blocks/footer.jade
+	include ../components/footer.jade
