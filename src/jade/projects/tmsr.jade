@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	
+	:verbatim
+	include ../mixins/head.jade
+	+head('Логотип, фирменный стиль и промо-сайт для компании TMSR — Вадик Матвеев', 'nested')
+
+	link(href="http://fonts.googleapis.com/css?family=Noto+Serif:400italic&amp;subset=latin,cyrillic",rel="stylesheet",type="text/css")
+	link(href="http://fonts.googleapis.com/css?family=Roboto+Slab:700&subset=latin,cyrillic",rel="stylesheet",type="text/css")
+
+	link(rel="stylesheet", href="../css/style--tmsr.css")
+
+body.tmsr
+	
+	:verbatim
+	include ../mixins/header.jade
+	+header('nested')
+
+
+	.tmsr__promo
+
+	section.project
+		.container-fluid
+			.row
+				.col-xs-12.col-lg-4
+					h2.project__title TMSR
+					h4.project__subtitle Фирменный стиль и сайт
+
+					p.project__year Июль 2015
+				.col-xs-12.col-md-9.col-lg-6
+					p.project__flow Компания TMSR занимается стивидоными услугами в Санкт-Петербурге. Встречает и разгружает суда приходящие в город, а также предоставляет место для хранения привезенного груза. Для выхода компании на следущий уровень и привлечения новых клиентов из ближнего зарубежья компании потребовался уверенный фирменный стиль и небольшой, но яркий и емкий сайт, рассказывающий о главных особенностях и преимуществах их услуг.<br><br>Придумал выразительный знак и разработал лаконичный фирменный стиль для него. В дальнешем занялся сайтом, который полностью спроектировал и разработал.
+				.col-xs-12.col-md-3.col-lg-2
+					.project__madein.project__madein--logomotiv
+						p Проект выполнен в&nbsp;
+							a.link(href="http://logomotiv.ru/") Дизайн-&nbsp;студии Logomotiv
+						p Арт-директор: Иван&nbsp;Большов
+						p Менеджер: Анна&nbsp;Шелковникова
+						p Разработчик: Илья&nbsp;Мясоедов
+
+
+	.tmsr__logo
+		.container-fluid
+			.row
+				.col-xs-12
+					//- .tmsr__logo-history
+					//- 	img.img-fluid(src="../img/tmsr__logo-history.png", alt="")
+					.tmsr__logo-history
+						.tmsr__logo-history-1
+							img.img-fluid(src="../img/tmsr__logo-history-1.png", alt="")
+						.tmsr__logo-history-plus
+							img.img-fluid(src="../img/tmsr__logo-history-plus.png", alt="")
+						.tmsr__logo-history-2
+							img.img-fluid(src="../img/tmsr__logo-history-2.png", alt="")
+						.tmsr__logo-history-equal
+							img.img-fluid(src="../img/tmsr__logo-history-equal.png", alt="")
+						.tmsr__logo-history-3
+							img.img-fluid(src="../img/tmsr__logo-history-3.png", alt="")
+				.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+					p.project__flow За основу знака были взяты образы грузового контейнера и условное обозначение территории одного из терминалов компании. 
+
+
+	.tmsr__identity
+		img.tmsr__identity-img.img-fluid(src="../img/identity.jpg", alt="")
+
+		.tmsr__logo-sq
+			img.img-fluid(src="../img/tmsr__logo-sq.png", alt="")
+
+		p.tmsr__italic Квадратная версия логотипа
+
+		
+
+
+	.tmsr__animation
+		.tmsr__kran
+		.tmsr__kran
+		.tmsr__port
+		.tmsr__ship-inner
+			.tmsr__ship.wow.slideInRight(data-wow-duration="5s" data-wow-delay="0,2s") 
+		.tmsr__water
+
+
+	.tmsr__laptop
+		span.tmsr__laptop-heading Просто сайт
+			.tmsr__italic
+				a.link.link--white(href="tmsrspb.ru") tmsrspb.ru
+		.tmsr__laptop-inner
+			img.img-fluid(src="../img/macbook.png", alt="")
+
+
+	.tmsr__site
+		img.img-fluid(src="../img/tmsr__site.png", alt="")
+
+		.row
+			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+				p.project__flow Сайт доступно объясняет почему лучше работать с компанией ТМСР.
+
+
+	.tmsr__external-inner.hidden-md-down
+		:verbatim
+		include ../components/html/tmsr.html
+
+	.tmsr__terminals-map.hidden-sm-up
+		img.img-fluid(src="../img/tmsr__terminals--xs.jpg", alt="")
+
+	//- .tmsr__externat-inner
+	//- 	iframe.tmsr__external-site(src="http://tmsrspb.ru/", frameborder="0")
+
+	.container-fluid
+		.row
+			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+				p.project__flow(style="margin-bottom: 50px" ) Для клиентов компании крайне важно знать точное расположение терминалов. По этой причине нарисовал подробные карты для каждого из терминалов, убрав лишнее и оставив только необходимую информацию, такую как расстояние от ближайшего пропускного сооружения, расположение относительно КАД, схемы заезда и выезда транспорта и саму площадь терминала. 
+
+			
+		img.img-fluid.m0a(style="margin-bottom: 50px" src="../img/compass.jpg", alt="")
+
+
+
+
+
+
+	:verbatim
+	include ../components/footer.jade
+
+	script(src="../js/main.min.js")
+
+	script.
+		new WOW().init();

@@ -1,0 +1,355 @@
+.tmsr {
+
+	&__promo {
+		height: 85vh;
+		background-image: url(../img/flags.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center ;
+
+		@media (min-width: $screen-lg-min) {
+			height: 700px;
+		}
+	}
+
+	&__logo {
+		margin: 30px 0 60px;
+		@media 
+		(min-width: $screen-md-min){
+			margin-top: 100px;
+			margin-bottom: 70px;
+		}
+	}
+
+	// &__logo-history {
+	// 	margin: 0 auto;
+	// }
+
+	&__logo-history {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@media 
+		(min-width: $screen-md-min) {
+			flex-direction: row;
+		}
+
+		&-plus {
+			width: 32px;
+			height: auto;
+
+			@media 
+			(min-width: $screen-md-min){
+				margin: 0 20px;
+			}
+		}
+
+		&-equal {
+			width: 43px;
+			height: auto;
+			transform: rotate(90deg);
+			margin: 20px 0 20px;
+
+			@media 
+			(min-width: $screen-md-min){
+				margin: 0 20px;
+				transform: none;
+			}
+
+			// & img {
+			// 	filter: blur(0);
+			// }
+		}
+
+		@media 
+		(min-width: $screen-lg-min){
+
+			&-plus, &-equal {
+			margin: 0 30px;
+			}
+		}
+
+		&-1, &-2, &-3 {
+			margin: 15px 0;
+		}
+
+		&-1 {
+			max-width: 257px;
+		}
+
+		&-2 {
+			max-width: 256px;
+		}
+
+		&-3 {
+			max-width: 268px;
+		}
+
+
+	}
+
+	&__italic {
+		font-family: 'Noto Serif', "PT Serif", serif;
+		font-style: italic;
+		font-size: 14px;
+	}
+
+	&__identity {
+		@media 
+		(min-width: $screen-md-min){
+			@include make-container();
+			max-width: 1200px;
+		}
+	}
+
+	&__identity .tmsr__italic {
+		text-align: center;
+		margin: 20px auto;
+
+
+	}
+
+	&__logo-sq {
+		width: 100px;		
+		margin: 40px auto 0;
+
+		@media 
+		(min-width: $screen-md-min){
+			width: 200px;
+		}
+	}
+
+
+	//// ANIMATION
+
+	&__animation {
+		position: relative;
+		height: 600px;
+		overflow: hidden;
+
+		@media 
+		(min-width: $screen-md-min) {
+
+		}
+	}
+
+	&__kran {
+		position: absolute;
+		top: 80px;
+		left: 50%;
+		width: 216px;
+		height: 356px;
+		background-image: url(../img/kran.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		transform: translateX(-100px);
+
+		@media (min-width: $screen-md-min) {
+			transform: translateX(-150px);
+		}
+
+		@media (min-width: $screen-lg-min) {
+			transform: translateX(-100px);
+		}
+
+		&:first-child {
+			transform: translateX(240px);
+
+			@media (min-width: $screen-md-min) {
+				transform: translateX(150px);
+			}
+
+			@media (min-width: $screen-lg-min) {
+				transform: translateX(240px);
+			}
+
+
+		}
+	}
+
+	&__port {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 40px;
+		top: 400px;
+		background-color: #fff;
+		border-top: 2px solid #1d9ad6;
+	}
+
+	&__ship-inner {
+		@include make-container();
+		max-width: 1200px;
+		position: relative;
+	}
+
+	&__ship {
+		margin: 0 auto;
+		position: absolute;
+		top: 186px;
+		right: 5px;
+		width: 770px;
+		height: 242px;
+		background-image: url(../img/ship.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		// transform: translateX(-290px);
+
+		@media (min-width: $screen-md-min){
+			right: -40px;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			right: 40px;
+		}
+		@media (min-width: $screen-xl-min) {
+			right: 130px;
+		}
+
+	}
+
+	&__water {
+		position: absolute;
+		bottom: 0;
+		width: 110%;
+		height: 192px;
+		background-image: url(../img/water.png);
+		background-size: contain;
+		background-repeat: repeat-x;
+		background-position: center;
+	}
+
+
+	////////
+
+
+	&__laptop {
+		background-color: #234873;
+		// padding-top: 50px;
+		text-align: center;
+		// position: relative;
+
+		// @media (min-width: $screen-lg-min){
+		// 	padding-bottom: 150px;
+		// }
+
+
+		&-heading {
+			display: block;
+			position: relative;
+			top: -50px;
+			font-size: 36px;
+			color: #fff;
+			font-weight: 100;
+		}
+
+		&-inner {
+			display: block;
+			position: relative;
+			top: -30px;
+			width: 100%;
+			margin: 20px auto 0;
+		}
+	}
+
+
+	&__site {
+		position: relative;
+		// height: 640px;
+		@include make-container();
+
+		&::before {
+			content: '';
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 11.5vw;
+			background-color: #234873;
+
+			@media (min-width: $screen-sm-min){
+				height: 12.3vw;
+			}
+
+			@media (min-width: $screen-md-min){
+				height: 12.5vw;
+			}
+
+			@media (min-width: $screen-lg-min){
+				height: 12.5vw;
+			}
+
+			@media (min-width: 1041px){
+				height: 139px;
+			}
+		}
+
+		& img {
+			position: relative;
+			z-index: 5;
+
+			@media (min-width: $screen-lg-min) {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			
+		}
+
+		& .project__flow {
+			position: relative;
+			// top: 510px;
+		}
+	}
+
+
+	///// TMSR External /////
+
+	// &__external-inner {
+	// 	width:756px; 
+	// 	height:496px; 
+	// 	overflow:hidden; 
+	// 	position:relative; 
+	// }
+
+	&__external-inner {
+		width: 100%;
+		position: relative;
+
+		// @media (min-width: $screen-xs-min){
+		// 	& .terminals {
+		// 		position: absolute;
+		// 		top: 0;
+		// 		left: 0;
+		// 		transform: scale(.5);
+		// 	}
+		// }
+	}
+
+
+}
+
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+}
