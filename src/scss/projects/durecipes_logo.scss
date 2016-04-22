@@ -1,28 +1,20 @@
 .dur-logo {
 
 	&__promo {
-		height: 75vh;
+		height: 70vh;
 		padding-top: 15vh;
 		background-image: url(../img/dur__steak-bg.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center ;
+		background-position: center;
 		@include make-container();
 		position: relative;
 		overflow: hidden;
 
-	}
+		@media ($min-md) { height: 75vh;}
+		@media ($min-lg) { height: 75vh;}
+		@media (min-width: 2000px)  { padding-top: 150px; height: 800px;}
 
-	&__border {
-		background-color: white;
-		width: 150%;
-		height: 13vw;
-		position: absolute;
-		left: 50%;
-		bottom: -100px;
-		transform: translateX(-50%) rotate(-4deg);
-
-		
 	}
 
 	&__edge {
@@ -49,12 +41,127 @@
 		}
 	}
 
+	&__border {
+		background-color: white;
+		width: 150%;
+		height: 10vh;
+		position: absolute;
+		left: 50%;
+		bottom: -5vh;
+		transform: translateX(-50%) rotate(-4deg);
+
+		@media ($min-sm) {	bottom: -7vh;}
+		@media ($min-md) {	height: 13vh; bottom: -7vh;}
+		@media ($min-lg) {	height: 50vw; top: 85%;}
+		// @media ($min-xl) {	bottom: -7vw;}
+		// @media (min-width: 2000px) { 
+		// 	height: 50vw;
+		// 	top: 85%;
+		// }
+		
+		&.dur-logo__border--up {
+			top: -5vh;
+
+			@media ($min-sm) {	top: -7vh;}
+			@media ($min-md) {	top: -7vh;}
+			@media ($min-lg) {	bottom: 85%; top: inherit;}
+		}
+
+		&.dur-logo__border--up .dur-logo__edge {
+			top: initial;
+			bottom: -6px;
+
+			&::before {
+				background-image:
+				radial-gradient(circle at 10px -5px, white 12px, transparent 13px);
+			}
+		}
+		
+	}
+
+	// &__leave {
+	// 	display: block;
+	// 	position: absolute;
+	// 	top: -13vw;
+	// 	margin: 0 auto;
+	// 	width: 534px;
+	// 	height: 246px;
+	// 	background-image: url(../img/dur__leaves.png);
+	// 	background-size: cover;
+	// 	background-repeat: no-repeat;
+	// 	background-position: center ;
+	// 	transform: scale(.6);
+	// }
+
 	&__logo-inner {
+		width: 80%;
 		margin: 0 auto;
+
+		@media ($min-md){
+			width: 300px;
+			height: auto;
+		}
 
 		@media ($min-lg){
 			width: 300px;
 			height: auto;
 		}
 	}
+
+
+	&__history {
+		padding: 50px 0;
+
+		& div {
+			height: auto;
+			margin: 0 auto;
+		}
+	}
+
+	&__history-inner {
+		width: 713px;
+	}
+
+	&__history-xs-inner {
+		width: 144px;
+	}
+
+
+	&__paper {
+		height: 50vh;
+		padding-top: 15vh;
+		background-image: url(../img/dur-logo__paper.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		@include make-container();
+		position: relative;
+		overflow: hidden;
+
+		@media ($min-md) { height: 60vh;}
+		@media ($min-lg) { height: 700px;}
+		@media (min-width: 2000px)  { padding-top: 150px; height: 800px;}
+
+	}
+
+
+	//// Logo-versions /////
+
+	&__logo-versions {
+		@include make-container();
+
+	}
+
+	&__logo-russian{
+		width: 770px;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	&__logo-english{
+		width: 685px;
+		height: auto;
+		margin: 0 auto;
+	}
+
 }

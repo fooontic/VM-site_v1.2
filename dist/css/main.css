@@ -3287,6 +3287,11 @@ button
     position: relative;
 }
 
+.hidden
+{
+    display: none;
+}
+
 .social-icon
 {
     display: inline-block;
@@ -4305,7 +4310,7 @@ button
 
     overflow: hidden; 
 
-    height: 75vh;
+    height: 70vh;
     margin-right: auto;
     margin-left: auto;
     padding-top: 15vh;
@@ -4317,21 +4322,27 @@ button
     background-position: center;
     background-size: cover;
 }
-
-.dur-logo__border
+@media (min-width: 768px)
 {
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-
-    width: 150%;
-    height: 13vw;
-
-    -webkit-transform: translateX(-50%) rotate(-4deg);
-        -ms-transform: translateX(-50%) rotate(-4deg);
-            transform: translateX(-50%) rotate(-4deg); 
-
-    background-color: white;
+    .dur-logo__promo
+    {
+        height: 75vh;
+    }
+}
+@media (min-width: 992px)
+{
+    .dur-logo__promo
+    {
+        height: 75vh;
+    }
+}
+@media (min-width: 2000px)
+{
+    .dur-logo__promo
+    {
+        height: 800px; 
+        padding-top: 150px;
+    }
 }
 
 .dur-logo__edge
@@ -4361,9 +4372,95 @@ button
     background-size: 22px 20px;
 }
 
+.dur-logo__border
+{
+    position: absolute;
+    bottom: -5vh;
+    left: 50%;
+
+    width: 150%;
+    height: 10vh;
+
+    -webkit-transform: translateX(-50%) rotate(-4deg);
+        -ms-transform: translateX(-50%) rotate(-4deg);
+            transform: translateX(-50%) rotate(-4deg); 
+
+    background-color: white;
+}
+@media (min-width: 544px)
+{
+    .dur-logo__border
+    {
+        bottom: -7vh;
+    }
+}
+@media (min-width: 768px)
+{
+    .dur-logo__border
+    {
+        bottom: -7vh; 
+
+        height: 13vh;
+    }
+}
+@media (min-width: 992px)
+{
+    .dur-logo__border
+    {
+        top: 85%; 
+
+        height: 50vw;
+    }
+}
+.dur-logo__border.dur-logo__border--up
+{
+    top: -5vh;
+}
+@media (min-width: 544px)
+{
+    .dur-logo__border.dur-logo__border--up
+    {
+        top: -7vh;
+    }
+}
+@media (min-width: 768px)
+{
+    .dur-logo__border.dur-logo__border--up
+    {
+        top: -7vh;
+    }
+}
+@media (min-width: 992px)
+{
+    .dur-logo__border.dur-logo__border--up
+    {
+        top: inherit; 
+        bottom: 85%;
+    }
+}
+.dur-logo__border.dur-logo__border--up .dur-logo__edge
+{
+    top: initial;
+    bottom: -6px;
+}
+.dur-logo__border.dur-logo__border--up .dur-logo__edge::before
+{
+    background-image: -webkit-radial-gradient(10px -5px circle, white 12px, transparent 13px);
+    background-image:         radial-gradient(circle at 10px -5px, white 12px, transparent 13px);
+}
+
 .dur-logo__logo-inner
 {
+    width: 80%;
     margin: 0 auto;
+}
+@media (min-width: 768px)
+{
+    .dur-logo__logo-inner
+    {
+        width: 300px;
+        height: auto;
+    }
 }
 @media (min-width: 992px)
 {
@@ -4372,6 +4469,89 @@ button
         width: 300px;
         height: auto;
     }
+}
+
+.dur-logo__history
+{
+    padding: 50px 0;
+}
+.dur-logo__history div
+{
+    height: auto;
+    margin: 0 auto;
+}
+
+.dur-logo__history-inner
+{
+    width: 713px;
+}
+
+.dur-logo__history-xs-inner
+{
+    width: 144px;
+}
+
+.dur-logo__paper
+{
+    position: relative;
+
+    overflow: hidden; 
+
+    height: 50vh;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 15vh;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    background-image: url(../img/dur-logo__paper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width: 768px)
+{
+    .dur-logo__paper
+    {
+        height: 60vh;
+    }
+}
+@media (min-width: 992px)
+{
+    .dur-logo__paper
+    {
+        height: 700px;
+    }
+}
+@media (min-width: 2000px)
+{
+    .dur-logo__paper
+    {
+        height: 800px; 
+        padding-top: 150px;
+    }
+}
+
+.dur-logo__logo-versions
+{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px; 
+    padding-left: 15px;
+}
+
+.dur-logo__logo-russian
+{
+    width: 770px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.dur-logo__logo-english
+{
+    width: 685px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .tmsr__promo

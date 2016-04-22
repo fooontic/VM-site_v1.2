@@ -50,4 +50,71 @@
       <div class="dur-logo__edge"></div>
     </div>
   </section>
+  <section class="project">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-lg-4">
+          <h2 class="project__title">Дюрецепты</h2>
+          <h4 class="project__subtitle">Логотип для приложения</h4>
+          <p class="project__year">2014</p>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-lg-6">
+          <p class="project__flow">Сделал запоминающуюся иконку и леттеринг рецептника по диете Дюкана. Иконка приложения объединяет букву «Д» и образ добродушного повара. </p>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-lg-2">
+          <div class="project__madein project__madein--logomotiv">
+            <p>Проект выполнен в<br><a href="http://logomotivapp.ru/" class="link">Дизайн-&nbsp;студии Logomotiv</a></p>
+            <p>Арт-директор: Иван&nbsp;Большов</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="dur-logo__history">
+    <div class="dur-logo__history-xs-inner hidden-sm-up"><img src="../img/dur-logo__logo-history--ver.png" alt="" class="img-fluid" /></div>
+    <div class="dur-logo__history-inner hidden-sm-down"><img src="../img/dur-logo__logo-history.png" alt="" class="img-fluid" /></div>
+  </section>
+  <section class="dur-logo__paper">
+    <div class="dur-logo__border dur-logo__border--up">
+      <div class="dur-logo__edge"></div>
+    </div>
+    <div class="dur-logo__border">
+      <div class="dur-logo__edge"></div>
+    </div>
+  </section>
+  <section class="dur-logo__logo-versions">
+    <div class="dur-logo__logo-russian"><img src="../img/dur-logo__russian.png" alt="" class="img-fluid" /></div>
+    <div class="dur-logo__logo-english hidden"><img src="../img/dur-logo__english.png" alt="" class="img-fluid" /></div>
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-7 col-lg-offset-4 col-xl-8">
+        <p class="project__flow">Леттеринг в <span class="link link--pseudo linkLogoRussian">русской</span> и <span class="link link--pseudo linkLogoEnglish">английской</span> версиях для размещения внутри приложения, а также рекламных и промо-материалов</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="footer__copyright">© 2015</div>
+          <div class="footer__mail">Пишите мне на <a class="link">fooontic@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.min.js"></script>
+  <script>
+    $(document).ready(function()
+    {
+      $('.linkLogoEnglish').on('click', function()
+      {
+        $('.dur-logo__logo-russian').fadeOut(300)
+        $('dur-logo__logo-english').fadeIn(300);
+      });
+      $('.linkLogoRussian').on('click', function()
+      {
+        $('.dur-logo__logo-english').fadeOut(300)
+        $('dur-logo__logo-russian').fadeIn(300);
+      });
+    })
+  </script>
 </body>

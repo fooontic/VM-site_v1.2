@@ -18,7 +18,72 @@ body.dur-logo
 
 		.dur-logo__border
 			.dur-logo__edge
+			//- .dur-logo__leave
 
-		
 
 
+	section.project
+		.container-fluid
+			.row
+				.col-xs-12.col-lg-4
+					h2.project__title Дюрецепты
+					h4.project__subtitle Логотип для приложения
+					p.project__year 2014
+
+				.col-xs-12.col-sm-9.col-lg-6
+					p.project__flow Сделал запоминающуюся иконку и леттеринг рецептника по диете Дюкана. Иконка приложения объединяет букву «Д» и образ добродушного повара. 
+
+				.col-xs-12.col-sm-3.col-lg-2
+					.project__madein.project__madein--logomotiv
+						p Проект выполнен в<br>
+							a.link(href="http://logomotivapp.ru/") Дизайн-&nbsp;студии Logomotiv
+						p Арт-директор: Иван&nbsp;Большов
+
+
+	section.dur-logo__history
+		.dur-logo__history-xs-inner.hidden-sm-up
+			img.img-fluid(src="../img/dur-logo__logo-history--ver.png", alt="")
+		.dur-logo__history-inner.hidden-sm-down
+			img.img-fluid(src="../img/dur-logo__logo-history.png", alt="")
+
+
+	section.dur-logo__paper
+		//- img.img-fluid(src="../img/dur__steak-bg.jpg", alt="")
+		.dur-logo__border.dur-logo__border--up
+			.dur-logo__edge
+		.dur-logo__border
+			.dur-logo__edge
+
+	section.dur-logo__logo-versions
+		.dur-logo__logo-russian
+			img.img-fluid(src="../img/dur-logo__russian.png", alt="")
+		.dur-logo__logo-english.hidden
+			img.img-fluid(src="../img/dur-logo__english.png", alt="")
+
+		.row
+			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+					p.project__flow Леттеринг в 
+						span.link.link--pseudo.linkLogoRussian русской
+						|  и 
+						span.link.link--pseudo.linkLogoEnglish английской
+						|  версиях для размещения внутри приложения, а также рекламных и промо-материалов
+
+
+	:verbatim
+	include ../components/footer.jade
+
+	script(src="../js/main.min.js")
+
+	script.
+		$(document).ready(function(){
+			
+			$('.linkLogoEnglish').on('click', function(){
+				$('.dur-logo__logo-russian').fadeOut(300)
+				$('dur-logo__logo-english').fadeIn(300);
+			});
+
+			$('.linkLogoRussian').on('click', function(){
+				$('.dur-logo__logo-english').fadeOut(300)
+				$('dur-logo__logo-russian').fadeIn(300);
+			});
+		})
