@@ -5,6 +5,12 @@ $screen-md-min:		768px; // Medium screen / tablet
 $screen-lg-min:		992px; // Large screen / desktop
 $screen-xl-min:		1200px; // Extra large screen / wide desktop
 
+$min-xs: 			'min-width:' + $screen-xs-min;
+$min-sm: 			'min-width:' + $screen-sm-min;
+$min-md: 			'min-width:' + $screen-md-min;
+$min-lg: 			'min-width:' + $screen-lg-min;
+$min-xl: 			'min-width:' + $screen-xl-min;
+
 
 
 

@@ -4299,6 +4299,81 @@ button
     }
 }
 
+.dur-logo__promo
+{
+    position: relative;
+
+    overflow: hidden; 
+
+    height: 75vh;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 15vh;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    background-image: url(../img/dur__steak-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dur-logo__border
+{
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+
+    width: 150%;
+    height: 13vw;
+
+    -webkit-transform: translateX(-50%) rotate(-4deg);
+        -ms-transform: translateX(-50%) rotate(-4deg);
+            transform: translateX(-50%) rotate(-4deg); 
+
+    background-color: white;
+}
+
+.dur-logo__edge
+{
+    position: absolute;
+    top: -6px;
+    right: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    height: 9px;
+}
+.dur-logo__edge::before
+{
+    position: absolute;
+    top: -1px;
+
+    width: 100%;
+    height: 10px;
+
+    content: '';
+
+    background-image: -webkit-radial-gradient(10px 15px circle, white 12px, transparent 13px);
+    background-image:         radial-gradient(circle at 10px 15px, white 12px, transparent 13px); 
+    background-repeat: repeat;
+    background-size: 22px 20px;
+}
+
+.dur-logo__logo-inner
+{
+    margin: 0 auto;
+}
+@media (min-width: 992px)
+{
+    .dur-logo__logo-inner
+    {
+        width: 300px;
+        height: auto;
+    }
+}
+
 .tmsr__promo
 {
     height: 85vh;
