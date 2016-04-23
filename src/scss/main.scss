@@ -15,6 +15,8 @@
 // CORE 
 @import "components/variables";
 
+@import "mixins/typography";
+
 
 @import "components/my-scaffoldings";
 @import "components/grid";
@@ -50,3 +52,8 @@
 @import "projects/durecipes_logo";
 @import "projects/tmsr.scss";
 
+
+
+///// JS /////
+
+@import "js/switcher";

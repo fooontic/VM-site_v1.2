@@ -3257,8 +3257,8 @@ button
 }
 .link--white:hover
 {
-    color: #62b7d7;
-    border-bottom: 1px solid rgba(48, 150, 188, .4);
+    color: white;
+    border-bottom: 1px solid rgba(77, 174, 210, .4);
 }
 .link--pseudo
 {
@@ -3266,7 +3266,7 @@ button
 }
 .link--pseudo--white:hover
 {
-    border-bottom: 1px dashed rgba(169, 101, 102, .4);
+    border-bottom: 1px dashed rgba(187, 134, 135, .4);
 }
 
 .h2
@@ -4540,18 +4540,22 @@ button
     padding-left: 15px;
 }
 
-.dur-logo__logo-russian
+.dur-logo__versions-item
 {
-    width: 770px;
+    display: none;
+
     height: auto;
     margin: 0 auto;
 }
 
-.dur-logo__logo-english
+.dur-logo__versions-item--russian
+{
+    width: 770px;
+}
+
+.dur-logo__versions-item--english
 {
     width: 685px;
-    height: auto;
-    margin: 0 auto;
 }
 
 .tmsr__promo
@@ -5011,4 +5015,52 @@ button
 {
     -webkit-animation-name: slideInRight;
             animation-name: slideInRight;
+}
+
+.switchSelected
+{
+    display: block;
+}
+
+.switch
+{
+    padding: 2px; 
+
+    -webkit-transition: all .4s;
+            transition: all .4s;
+    text-decoration: none;
+
+    color: #a96566;
+    border-bottom: 1px solid rgba(169, 101, 102, .4);
+    border-bottom: 1px dashed rgba(169, 101, 102, .4);
+}
+.switch:hover,
+.switch:focus
+{
+    cursor: pointer;
+    -webkit-transition: all .1s;
+            transition: all .1s;
+    text-decoration: none;
+
+    color: #3096bc;
+    border-bottom: 1px solid rgba(48, 150, 188, .4);
+    outline: none;
+}
+
+.switch.active
+{
+    color: #333; 
+    border: none;
+    border-radius: 3px;
+    background-color: #dceff6;
+}
+.switch.active:hover,
+.switch.active:focus
+{
+    cursor: text;
+    text-decoration: none;
+
+    color: #333;
+    border: none;
+    outline: none;
 }

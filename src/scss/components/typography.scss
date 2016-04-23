@@ -20,15 +20,15 @@
 	}
 
 	&--white:hover {
-		color: lighten($blue, 15%);
-		border-bottom: 1px solid fade-out(lighten($blue, .1), .6);
+		color: lighten($blue, 85%);
+		border-bottom: 1px solid fade-out(lighten($blue, 10%), .6);
 	}
 
 	&--pseudo {
 		border-bottom: 1px dashed fade-out($link, .6);
 
 		&--white:hover {
-			border-bottom: 1px dashed fade-out(lighten($link, .1), .6);
+			border-bottom: 1px dashed fade-out(lighten($link, 10%), .6);
 		}
 	}
 

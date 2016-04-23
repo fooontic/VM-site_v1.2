@@ -54,18 +54,18 @@ body.dur-logo
 		.dur-logo__border
 			.dur-logo__edge
 
-	section.dur-logo__logo-versions
-		.dur-logo__logo-russian
+	section.dur-logo__versions.switcher
+		.dur-logo__versions-item.dur-logo__versions-item--russian.switchSelected#logoRu
 			img.img-fluid(src="../img/dur-logo__russian.png", alt="")
-		.dur-logo__logo-english.hidden
+		.dur-logo__versions-item.dur-logo__versions-item--english#logoEn
 			img.img-fluid(src="../img/dur-logo__english.png", alt="")
 
 		.row
 			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
-					p.project__flow Леттеринг в 
-						span.link.link--pseudo.linkLogoRussian русской
+					p.project__flow.switchNav Леттеринг в 
+						span.switch.active#for_logoRu русской
 						|  и 
-						span.link.link--pseudo.linkLogoEnglish английской
+						span.switch#for_logoEn английской
 						|  версиях для размещения внутри приложения, а также рекламных и промо-материалов
 
 
@@ -77,13 +77,63 @@ body.dur-logo
 	script.
 		$(document).ready(function(){
 			
-			$('.linkLogoEnglish').on('click', function(){
-				$('.dur-logo__logo-russian').fadeOut(300)
-				$('dur-logo__logo-english').fadeIn(300);
-			});
+			//- $('.linkLogoEnglish').on('click', function(){
+			//- 	$('.dur-logo__logo-russian').fadeOut(300)
+			//- 	$('dur-logo__logo-english').fadeIn(300);
+			//- });
 
-			$('.linkLogoRussian').on('click', function(){
-				$('.dur-logo__logo-english').fadeOut(300)
-				$('dur-logo__logo-russian').fadeIn(300);
-			});
+			//- $('.linkLogoRussian').on('click', function(){
+			//- 	$('.dur-logo__logo-english').fadeOut(300)
+			//- 	$('dur-logo__logo-russian').fadeIn(300);
+			//- });
+
+			//- $('.linkLogoVersion').on('click', function() {
+			//- 	$(this).removeClass('link link--pseudo').siblings().addClass('link link--pseudo');
+
+			//- 	if ($('#logoRussian').hasClass('link') ) {
+			//- 		$(this)
+			//- 			.closest('.dur-logo__versions').children('.dur-logo__versions-item--russian').addClass('active')
+			//- 			.siblings().removeClass('active');
+			//- 	};
+
+			//- 	if ($('#logoEnglish').hasClass('link') ) {
+			//- 		$(this)
+			//- 			.closest('.dur-logo__versions').children('.dur-logo__versions-item--english').addClass('active')
+			//- 			.siblings().removeClass('active');
+			//- 	};
+
+			//- });
+
+
+			$('.switcher').each(function(){
+
+				var _picEl = $(this),
+					_switchEl = $(this).find('.switchNav'),
+					_switchers =  $(this).find('.switch');
+
+				_switchers.click(function(){
+					
+					var thisEl = $(this);
+					if(thisEl.hasClass('.active')) {return;}
+
+					_switchEl.find('.active').removeClass('active');
+					thisEl.addClass('active ');
+
+					var oldLayout = _picEl.find('.switchSelected');
+					oldLayout.removeClass('switchSelected');
+
+					var id = thisEl.attr('id').split('for_')[1];
+					var newLayout = jQuery('#' + id);
+					newLayout.addClass('switchSelected');
+
+					console.log('ok');
+
+				})
+
+			})
+
+
+			
 		})
+
+

@@ -152,16 +152,19 @@
 
 	}
 
-	&__logo-russian{
-		width: 770px;
+	&__versions-item{
+		display: none;	
 		height: auto;
 		margin: 0 auto;
+
 	}
 
-	&__logo-english{
+	&__versions-item--russian{
+		width: 770px;
+	}
+
+	&__versions-item--english{
 		width: 685px;
-		height: auto;
-		margin: 0 auto;
 	}
 
 }

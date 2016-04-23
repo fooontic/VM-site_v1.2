@@ -1,0 +1,24 @@
+.switchSelected {
+	display: block;
+}
+
+.switch {
+	@include make-link;
+	@include make-pseudo-link;
+	padding: 2px;
+}
+
+.switch.active {
+	background-color: lighten($blue, 45%);
+	border-radius: 3px;
+	border: none;
+	color: $text-color;
+	
+	&:hover, &:focus {
+		color: $text-color;
+		border: none;
+		cursor: text;
+		text-decoration: none;
+		outline: none;
+	}
+}

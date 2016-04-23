@@ -1,0 +1,40 @@
+@mixin make-link() {
+	// display: inline-block;
+	text-decoration: none;
+	color: $link;
+	border-bottom: 1px solid fade-out($link, .6);
+	transition: all .4s;
+
+	&:hover, &:focus{
+		color: $blue;
+		border-bottom: 1px solid fade-out($blue, .6);
+		transition: all .1s;
+		cursor: pointer;
+		text-decoration: none;
+		outline: none;
+	}
+
+}
+
+@mixin make-link-white() {
+	color: #fff;
+	border-bottom: 1px solid fade-out(#fff, .6);
+
+	&:hover {
+		color: lighten($blue, 15%);
+		border-bottom: 1px solid fade-out(lighten($blue, 10%), .6);
+	}
+}
+
+@mixin make-pseudo-link() {	
+
+	border-bottom: 1px dashed fade-out($link, .6);
+
+}
+
+@mixin make-pseudo-link-white() {	
+
+	border-bottom: 1px dashed fade-out(lighten($link, 10%), .6);
+	
+}
+
