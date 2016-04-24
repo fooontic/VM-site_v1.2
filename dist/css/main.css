@@ -3938,22 +3938,15 @@ button
 .project__year:before
 {
     position: absolute;
-    top: -10px;
+    top: -5px;
     left: 0;
 
     width: 20px;
-    height: 2px;
+    height: 1px;
 
     content: '';
 
     background-color: #6d6e70;
-}
-@media (min-width: 992px)
-{
-    .project__year
-    {
-        margin-top: 50px;
-    }
 }
 
 .project__flow
@@ -4473,7 +4466,7 @@ button
 
 .dur-logo__history
 {
-    padding: 50px 0;
+    padding: 60px 0;
 }
 .dur-logo__history div
 {
@@ -4532,11 +4525,13 @@ button
     }
 }
 
-.dur-logo__logo-versions
+.dur-logo__versions
 {
     margin-right: auto;
     margin-left: auto;
-    padding-right: 15px; 
+    padding-top: 40px;
+    padding-right: 15px;
+    padding-bottom: 50px; 
     padding-left: 15px;
 }
 
@@ -4544,18 +4539,76 @@ button
 {
     display: none;
 
+    width: 100%; 
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 15px;
 }
 
 .dur-logo__versions-item--russian
 {
-    width: 770px;
+    max-width: 770px;
 }
 
 .dur-logo__versions-item--english
 {
-    width: 685px;
+    max-width: 685px;
+}
+
+.dur-logo__icons
+{
+    max-width: 930px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-bottom: 70px; 
+    padding-left: 15px;
+}
+@media (min-width: 992px)
+{
+    .dur-logo__icons
+    {
+        padding-top: 100px;
+        padding-bottom: 150px;
+    }
+}
+.dur-logo__icons .row
+{
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+            justify-content: space-around;
+}
+
+.dur-logo__icons-item
+{
+    width: 30%;
+    max-width: 109px;
+    padding: 6px; 
+
+    text-align: center;
+}
+.dur-logo__icons-item:nth-child(1)
+{
+    margin-left: 5%;
+}
+.dur-logo__icons-item:nth-child(3)
+{
+    margin-right: 5%;
+}
+.dur-logo__icons-item img
+{
+    margin: 0 auto;
+}
+
+.dur-logo__icons-flow
+{
+    font-size: 14px;
+    font-style: italic;
+
+    display: block;
+
+    padding: 10px 0 50px; 
+
+    color: #6d6e70;
 }
 
 .tmsr__promo
@@ -5045,6 +5098,10 @@ button
     color: #3096bc;
     border-bottom: 1px solid rgba(48, 150, 188, .4);
     outline: none;
+}
+.switch:hover
+{
+    border-bottom-style: dashed;
 }
 
 .switch.active

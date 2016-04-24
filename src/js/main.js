@@ -3,3 +3,5 @@
 
 //= vendor/jquery.color.js
 //= vendor/jquery.countup.js
+
+//= switcher.js

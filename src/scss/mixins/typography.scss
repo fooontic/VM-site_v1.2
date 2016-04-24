@@ -30,6 +30,10 @@
 
 	border-bottom: 1px dashed fade-out($link, .6);
 
+	&:hover {
+		border-bottom-style: dashed;
+	}
+
 }
 
 @mixin make-pseudo-link-white() {	

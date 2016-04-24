@@ -110,7 +110,7 @@
 
 
 	&__history {
-		padding: 50px 0;
+		padding: 60px 0;
 
 		& div {
 			height: auto;
@@ -147,24 +147,66 @@
 
 	//// Logo-versions /////
 
-	&__logo-versions {
+	&__versions {
 		@include make-container();
+		padding-top: 40px;
+		padding-bottom: 50px;
 
 	}
 
 	&__versions-item{
 		display: none;	
 		height: auto;
-		margin: 0 auto;
+		margin: 0 auto 15px;
+		width: 100%;
 
 	}
 
 	&__versions-item--russian{
-		width: 770px;
+		max-width: 770px;
 	}
 
 	&__versions-item--english{
-		width: 685px;
+		max-width: 685px;
+	}
+
+
+
+	///// Icons /////
+
+	&__icons {
+		@include make-container();
+		max-width: 930px;
+		padding-bottom: 70px;
+
+		@media ($min-lg){
+			padding-top: 100px;
+			padding-bottom: 150px;
+		}
+
+		& .row { 
+			justify-content: space-around;
+		}
+	}
+
+	&__icons-item {
+		width: 30%;
+		max-width: 109px;
+		text-align: center;
+		padding: 6px;
+
+		&:nth-child(1) { margin-left: 5%;}
+		&:nth-child(3) { margin-right: 5%;}
+
+		& img{	margin: 0 auto;}
+	}
+
+	&__icons-flow {
+		display: block;
+		color: #6D6E70;
+		font-size: $fz-s;
+		font-style: italic;
+		padding: 10px 0 50px;
 	}
 
 }

@@ -28,17 +28,17 @@
 			content: '';
 			position: absolute;
 			width: 20px;
-			height: 2px;
-			top: -10px;
+			height: 1px;
+			top: -5px;
 			left: 0;
 			background-color: #6d6e70;
 
 		}
 
-		@media 
-		(min-width: $screen-lg-min) {
-			margin-top: 50px;
-		}
+		// @media 
+		// (min-width: $screen-lg-min) {
+		// 	margin-top: 25px;
+		// }
 	}
 
 	&__flow {

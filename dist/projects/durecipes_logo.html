@@ -91,6 +91,14 @@
       </div>
     </div>
   </section>
+  <section class="dur-logo__icons">
+    <div class="row">
+      <div class="dur-logo__icons-item"><img src="../img/dur-logo__icon-win.png" alt="" class="img-fluid" /><span class="dur-logo__icons-flow">Windows</span></div>
+      <div class="dur-logo__icons-item"><img src="../img/dur-logo__icon-ios.png" alt="" class="img-fluid" /><span class="dur-logo__icons-flow">iOS</span></div>
+      <div class="dur-logo__icons-item"><img src="../img/dur-logo__icon-android.png" alt="" class="img-fluid" /><span class="dur-logo__icons-flow">Android</span></div>
+      <div class="dur-logo__icons-phones"><img src="../img/dur-logo__icon-phones.jpg" alt="" class="img-fluid" /></div>
+    </div>
+  </section>
   <footer class="footer">
     <div class="container-fluid">
       <div class="row">
@@ -102,52 +110,4 @@
     </div>
   </footer>
   <script src="../js/main.min.js"></script>
-  <script>
-    $(document).ready(function()
-    {
-      //- $('.linkLogoEnglish').on('click', function(){
-      //- 	$('.dur-logo__logo-russian').fadeOut(300)
-      //- 	$('dur-logo__logo-english').fadeIn(300);
-      //- });
-      //- $('.linkLogoRussian').on('click', function(){
-      //- 	$('.dur-logo__logo-english').fadeOut(300)
-      //- 	$('dur-logo__logo-russian').fadeIn(300);
-      //- });
-      //- $('.linkLogoVersion').on('click', function() {
-      //- 	$(this).removeClass('link link--pseudo').siblings().addClass('link link--pseudo');
-      //- 	if ($('#logoRussian').hasClass('link') ) {
-      //- 		$(this)
-      //- 			.closest('.dur-logo__versions').children('.dur-logo__versions-item--russian').addClass('active')
-      //- 			.siblings().removeClass('active');
-      //- 	};
-      //- 	if ($('#logoEnglish').hasClass('link') ) {
-      //- 		$(this)
-      //- 			.closest('.dur-logo__versions').children('.dur-logo__versions-item--english').addClass('active')
-      //- 			.siblings().removeClass('active');
-      //- 	};
-      //- });
-      $('.switcher').each(function()
-      {
-        var _picEl = $(this),
-          _switchEl = $(this).find('.switchNav'),
-          _switchers = $(this).find('.switch');
-        _switchers.click(function()
-        {
-          var thisEl = $(this);
-          if (thisEl.hasClass('.active'))
-          {
-            return;
-          }
-          _switchEl.find('.active').removeClass('active');
-          thisEl.addClass('active ');
-          var oldLayout = _picEl.find('.switchSelected');
-          oldLayout.removeClass('switchSelected');
-          var id = thisEl.attr('id').split('for_')[1];
-          var newLayout = jQuery('#' + id);
-          newLayout.addClass('switchSelected');
-          console.log('ok');
-        })
-      })
-    })
-  </script>
 </body>

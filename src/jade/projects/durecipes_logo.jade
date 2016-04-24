@@ -69,71 +69,25 @@ body.dur-logo
 						|  версиях для размещения внутри приложения, а также рекламных и промо-материалов
 
 
+	section.dur-logo__icons
+		.row
+			.dur-logo__icons-item
+				img.img-fluid(src="../img/dur-logo__icon-win.png", alt="")
+				span.dur-logo__icons-flow Windows
+			.dur-logo__icons-item
+				img.img-fluid(src="../img/dur-logo__icon-ios.png", alt="")
+				span.dur-logo__icons-flow iOS
+			.dur-logo__icons-item
+				img.img-fluid(src="../img/dur-logo__icon-android.png", alt="")
+				span.dur-logo__icons-flow Android
+
+			.dur-logo__icons-phones
+				img.img-fluid(src="../img/dur-logo__icon-phones.jpg", alt="")
+
+
 	:verbatim
 	include ../components/footer.jade
 
 	script(src="../js/main.min.js")
-
-	script.
-		$(document).ready(function(){
-			
-			//- $('.linkLogoEnglish').on('click', function(){
-			//- 	$('.dur-logo__logo-russian').fadeOut(300)
-			//- 	$('dur-logo__logo-english').fadeIn(300);
-			//- });
-
-			//- $('.linkLogoRussian').on('click', function(){
-			//- 	$('.dur-logo__logo-english').fadeOut(300)
-			//- 	$('dur-logo__logo-russian').fadeIn(300);
-			//- });
-
-			//- $('.linkLogoVersion').on('click', function() {
-			//- 	$(this).removeClass('link link--pseudo').siblings().addClass('link link--pseudo');
-
-			//- 	if ($('#logoRussian').hasClass('link') ) {
-			//- 		$(this)
-			//- 			.closest('.dur-logo__versions').children('.dur-logo__versions-item--russian').addClass('active')
-			//- 			.siblings().removeClass('active');
-			//- 	};
-
-			//- 	if ($('#logoEnglish').hasClass('link') ) {
-			//- 		$(this)
-			//- 			.closest('.dur-logo__versions').children('.dur-logo__versions-item--english').addClass('active')
-			//- 			.siblings().removeClass('active');
-			//- 	};
-
-			//- });
-
-
-			$('.switcher').each(function(){
-
-				var _picEl = $(this),
-					_switchEl = $(this).find('.switchNav'),
-					_switchers =  $(this).find('.switch');
-
-				_switchers.click(function(){
-					
-					var thisEl = $(this);
-					if(thisEl.hasClass('.active')) {return;}
-
-					_switchEl.find('.active').removeClass('active');
-					thisEl.addClass('active ');
-
-					var oldLayout = _picEl.find('.switchSelected');
-					oldLayout.removeClass('switchSelected');
-
-					var id = thisEl.attr('id').split('for_')[1];
-					var newLayout = jQuery('#' + id);
-					newLayout.addClass('switchSelected');
-
-					console.log('ok');
-
-				})
-
-			})
-
-
-			
-		})
 
 
