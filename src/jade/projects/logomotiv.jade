@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	:verbatim
+	include ../mixins/head.jade
+	+head('Дизайн и разработка сайта для студии Logomotiv Apps', 'nested')
+
+body.logomotiv
+	
+	:verbatim
+	include ../mixins/header.jade
+	+header('nested')
+
+	section.logomotiv__promo
+		//- img.img-fluid(src="../img/dur__steak-bg.jpg", alt="")
+		.logomotiv__promo-img-inner
+			img.logomotiv__promo-img.img-fluid(src="../img/logomotiv__promo.png", alt="")
+
+
+	section.project
+		.container-fluid
+			.row
+				.col-xs-12.col-lg-4
+					h2.project__title Logomotiv Apps
+					h4.project__subtitle Сайт для студии разработки приложений
+					p.project__year Лето 2015
+
+				.col-xs-12.col-sm-9.col-lg-6
+					p.project__flow Задача сделать адаптивный сайт по разработке мобильных приложений отдельный от основного сайта студии. Целевая аудитория нового сайта заказчики с запада, по этой причине сайт сделан в двух языковых версиях.<br><br>Мною спроектирован дизайн сайта, сделаны подачи большей части проектов и верстка. В ходе проектирования решили сознательно отказаться от системы администрирования сайтом. по этой причине разработал легкую систему шаблонов на Jade с необходимыми блоками для добавления новых проектов и статей без серьезных познаний в верстке и веб-технологиях.<br><br>
+						a.link(href="http://logomotivapp.ru/") logomotivapp.ru
+ 
+
+				.col-xs-12.col-sm-3.col-lg-2
+					.project__madein.project__madein--logomotiv
+						p Проект выполнен в и для<br>
+							a.link(href="http://logomotivapp.ru/") Дизайн-&nbsp;студии Logomotiv
+						p Арт-директор: Иван&nbsp;Большов
+						p Старший дизайнер: Антон&nbsp;Нестеров
+
+
+	section.logomotiv__video-inner
+		.row
+			video.logomotiv__video(autoplay loop muted poster="../video/logomotiv__main.png")
+				source(src="../video/logomotiv__main.webm" type="video/webm")
+				source(src="../video/logomotiv__main.mp4" type="video/mp4")
+
+			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+				p.project__flow В списке портфолио не только сделанные приложения, но те которые уже в разработке.
+
+
+	section.logomotiv__wc
+		.row
+			.col-xs-12.hidden-md-up
+				.compare-slider.twentytwenty-container
+					img.img-responsive(src="../img/compare--wc-s.png",alt="Watercheck")
+					img.img-responsive(src="../img/compare--yw-s.jpg",alt="Your Water")
+
+			.hidden-sm-down.col-md-12.col-lg-10.col-lg-offset-1
+				.compare-slider.twentytwenty-container
+					img.img-responsive(src="../img/compare--wc.png",alt="Watercheck")
+					img.img-responsive(src="../img/compare--yw.jpg",alt="Your Water")
+
+	:verbatim
+	include ../components/footer.jade
+
+	script(src="../js/main.min.js")
+
+	script.
+		$(window).load(function(){
+			$(".compare-slider").twentytwenty({default_offset_pct: 0.5});  
+		});
