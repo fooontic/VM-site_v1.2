@@ -5102,10 +5102,112 @@ button
 
 .logomotiv__video
 {
+    position: relative;
+
+    min-height: 1px;
+    padding-right: 0;
+    padding-left: 0;
+
     -webkit-box-flex: 100%;
     -webkit-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
+}
+@media (min-width: 992px)
+{
+    .logomotiv__video
+    {
+        padding-right: 15px; 
+        padding-left: 15px;
+    }
+}
+.logomotiv__video video
+{
+    max-width: 100%;
+}
+
+.logomotiv__case
+{
+    min-width: 320px;
+    max-width: 1200px; 
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.logomotiv__case-compare
+{
+    position: relative;
+    position: relative; 
+
+    min-height: 1px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -webkit-box-flex: 100%;
+    -webkit-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+}
+.logomotiv__case-compare--md
+{
+    z-index: 2; 
+
+    max-width: 1170px;
+
+    background-image: url('../img/logomotiv__case-bg.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+}
+.logomotiv__case-compare--md::after
+{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 30%;
+
+    content: '';
+
+    background-image: url('../img/logomotiv__case-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom; 
+    background-size: 100% auto;
+}
+
+.logomotiv__compare-inner
+{
+    position: relative; 
+    z-index: 3;
+
+    margin: 0 auto;
+}
+
+.logomotiv__case-compare--md .logomotiv__compare-inner
+{
+    max-width: 1005px;
+    padding: 75px 30px 50px;
+}
+@media (min-width: 992px)
+{
+    .logomotiv__case-compare--md .logomotiv__compare-inner
+    {
+        padding: 90px 30px 60px;
+    }
+}
+@media (min-width: 992px)
+{
+    .logomotiv__case-compare--md .logomotiv__compare-inner
+    {
+        padding: 90px 30px 60px;
+    }
 }
 
 .twentytwenty-horizontal .twentytwenty-handle:before,
@@ -5481,6 +5583,50 @@ button
 {
     -webkit-animation-name: none;
             animation-name: none;
+}
+
+@-webkit-keyframes pulse
+{
+    from
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+    50%
+    {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1);
+    }
+    to
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse
+{
+    from
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+    50%
+    {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                transform: scale3d(1.1, 1.1, 1.1);
+    }
+    to
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse
+{
+    -webkit-animation-name: pulse;
+            animation-name: pulse;
 }
 
 .switchSelected

@@ -40,25 +40,32 @@ body.logomotiv
 
 	section.logomotiv__video-inner
 		.row
-			video.logomotiv__video(autoplay loop muted poster="../video/logomotiv__main.png")
-				source(src="../video/logomotiv__main.webm" type="video/webm")
-				source(src="../video/logomotiv__main.mp4" type="video/mp4")
+			.logomotiv__video
+				video(autoplay loop muted poster="../video/logomotiv__main.png")
+					source(src="../video/logomotiv__main.webm" type="video/webm")
+					source(src="../video/logomotiv__main.mp4" type="video/mp4")
 
 			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
 				p.project__flow В списке портфолио не только сделанные приложения, но те которые уже в разработке.
 
 
-	section.logomotiv__wc
+	section.logomotiv__case
 		.row
-			.col-xs-12.hidden-md-up
-				.compare-slider.twentytwenty-container
-					img.img-responsive(src="../img/compare--wc-s.png",alt="Watercheck")
-					img.img-responsive(src="../img/compare--yw-s.jpg",alt="Your Water")
+			.logomotiv__case-compare.logomotiv__case-compare--xs.hidden-md-up
+				.logomotiv__compare-inner
+					.compare-slider.twentytwenty-container
+						img.img-responsive(src="../img/compare--wc-s.png",alt="Watercheck")
+						img.img-responsive(src="../img/compare--yw-s.jpg",alt="Your Water")
 
-			.hidden-sm-down.col-md-12.col-lg-10.col-lg-offset-1
-				.compare-slider.twentytwenty-container
-					img.img-responsive(src="../img/compare--wc.png",alt="Watercheck")
-					img.img-responsive(src="../img/compare--yw.jpg",alt="Your Water")
+			.logomotiv__case-compare.logomotiv__case-compare--md.hidden-sm-down
+				.logomotiv__compare-inner
+					.compare-slider.twentytwenty-container
+						img.img-responsive(src="../img/compare--wc.png",alt="Watercheck")
+						img.img-responsive(src="../img/compare--yw.jpg",alt="Your Water")
+
+
+			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+				p.project__flow Запоминающиеся интерактивные подачи проектов.
 
 	:verbatim
 	include ../components/footer.jade

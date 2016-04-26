@@ -25,7 +25,83 @@
 	}
 
 	&__video {
+		@include make-col(0px);
 		flex: 100%;
+
+		@media ($min-lg) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		& video { max-width: 100%;}
+
+	}
+
+
+
+
+
+	///// Case /////
+
+	&__case {
+		@include make-container();
+		min-width: 320px;
+		max-width: 1200px;
+	}
+
+	&__case-compare {
+		@include make-col(30px);
+		flex: 100%;
+		margin: 0 auto;		
+		position: relative;
+
+		&--md {
+			background-image: url('../img/logomotiv__case-bg.png');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: top;
+			// padding-top: 120px;
+			// padding-bottom: 60px;
+			max-width: 1170px;
+			z-index: 2;
+
+			&::after {
+				content: '';
+				width: 100%;
+				height: 30%;
+				display: block;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: 1;
+				background-image: url('../img/logomotiv__case-bg.png');
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				background-position: bottom;
+			}
+		}
+
+		
+
+		// & > div {
+		// 	max-width: 945px;
+		// 	margin: 0 auto;
+		// }
+	}
+
+	&__compare-inner {
+		margin: 0 auto;
+		z-index: 3;
+		position: relative;
+	}
+
+
+	&__case-compare--md &__compare-inner {
+		max-width: 1005px;
+		padding: 75px 30px 50px;
+
+		@media ($min-lg) { padding: 90px 30px 60px;}
+		@media ($min-lg) { padding: 90px 30px 60px;}
 	}
 
 }
@@ -44,7 +120,7 @@
 
 .compare-slider {
 	 // & img {
-	 // 	object-fit: cover;
+	 //     object-fit: cover;
 	 // }
 }
 
@@ -317,4 +393,24 @@
 
 .twentytwenty-handle:active {
 	animation-name: none;
+}
+
+
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.pulse {
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
 }
