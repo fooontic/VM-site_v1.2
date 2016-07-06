@@ -116,9 +116,51 @@
       </div>
     </div>
   </section>
+  <section class="daisy-cabinet">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-md-2">
+          <h2 class="project__subtitle">Кабинет</h2> </div>
+        <div class="col-xs-12 col-md-7">
+          <p class="project__flow">Львиной долей проекта было проектирование личного кабинета. Личный кабинет простых пользователей состоит из избранного, моих покупок, уведомлений и возможности создать компанию. После добавления новой компании или принятия приглашения стать
+            частью команды уже существующей компании, функционал личного кабинета расширяется до подачи и редактирование объявлений, учета бронирования, статистики продаж, настройки компании и прочее. </p>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <p class="project__flow"> <span class="daisy-cabinet__accent">Более 40 макетов </span>для 3-х разрешений. </p>
+        </div>
+      </div>
+    </div>
+    <div class="slider-container">
+      <div class="slider">
+        <ul class="slide-line">
+          <li class="slide-item slide-item--1">
+            <div style="background-image: url(../img/daisy__cabinet-1.jpg)" alt="" class="slide-screenshot"></div>
+          </li>
+          <li class="slide-item slide-item--2">
+            <div style="background-image: url(../img/daisy__cabinet-2.jpg)" alt="" class="slide-screenshot"></div>
+          </li>
+          <li class="slide-item slide-item--3">
+            <div style="background-image: url(../img/daisy__cabinet-3.jpg)" alt="" class="slide-screenshot"></div>
+          </li>
+          <li class="slide-item slide-item--4">
+            <div style="background-image: url(../img/daisy__cabinet-4.jpg)" alt="" class="slide-screenshot"></div>
+          </li>
+          <li class="slide-item slide-item--5">
+            <div style="background-image: url(../img/daisy__cabinet-5.jpg)" alt="" class="slide-screenshot"></div>
+          </li>
+          <li class="slide-item slide-item--6">
+            <div style="background-image: url(../img/daisy__cabinet-6.jpg)" alt="" class="slide-screenshot"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="slider-edge"> </div>
+  </section>
   <script src="../js/main.min.js"></script>
   <script>
+    // WOW Animation ////////////////////////////////
     new WOW().init();
+    // Bg follow to /////////////////////////////////
     var windw = this;
     $.fn.followTo = function(pos)
     {
@@ -146,6 +188,7 @@
     }
     var bgTop = 122;
     $('.daisy-bg').followTo(379);
+    // Parallax ////////////////////////////////////
     $.fn.parallax = function(pos)
     {
       var $this = this,
@@ -172,5 +215,13 @@
     //- 		},
     //- 	400);
     //- });
+    // Slider /////////////////////////////////////
+    $(function()
+    {
+      $('.slide-line').slideLine(
+      {
+        ratio: 0.99
+      });
+    });
   </script>
 </body>

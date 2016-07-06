@@ -1,5 +1,5 @@
 @mixin make-fixed-container {
 	@include make-container();
 	min-width: 320px;
-	max-width: 1200px;
+	max-width: 1170px;
 }

@@ -91,6 +91,45 @@ body.daisy
 				p.project__flow Страницы компании и предложения. 
 
 
+	section.daisy-cabinet
+		.container-fluid
+			.row
+				.col-xs-12.col-md-2
+					h2.project__subtitle Кабинет
+
+				.col-xs-12.col-md-7
+					p.project__flow Львиной долей проекта было проектирование личного кабинета. Личный кабинет простых пользователей состоит из избранного, моих покупок, уведомлений и возможности создать компанию. После добавления новой компании или принятия приглашения стать частью команды уже существующей компании, функционал личного кабинета расширяется до подачи и редактирование объявлений, учета бронирования, статистики продаж, настройки компании и прочее. 
+
+				.col-xs-12.col-md-3
+					p.project__flow 
+						span.daisy-cabinet__accent Более 40 макетов 
+						| для 3-х разрешений. 
+
+		
+
+		.slider-container
+			.slider
+				ul.slide-line
+					li.slide-item.slide-item--1
+						.slide-screenshot(style="background-image: url(../img/daisy__cabinet-1.jpg)", alt="")
+					li.slide-item.slide-item--2
+						.slide-screenshot(style="background-image: url(../img/daisy__cabinet-2.jpg)", alt="")
+					li.slide-item.slide-item--3
+						.slide-screenshot(style="background-image: url(../img/daisy__cabinet-3.jpg)", alt="")
+					li.slide-item.slide-item--4
+						.slide-screenshot(style="background-image: url(../img/daisy__cabinet-4.jpg)", alt="")
+					li.slide-item.slide-item--5
+						.slide-screenshot(style="background-image: url(../img/daisy__cabinet-5.jpg)", alt="")
+					li.slide-item.slide-item--6
+						.slide-screenshot(style="background-image: url(../img/daisy__cabinet-6.jpg)", alt="")
+
+
+		.slider-edge 
+
+
+
+
+
 
 
 
@@ -101,9 +140,13 @@ body.daisy
 	script(src="../js/main.min.js")
 
 	script.
-
+		
+		// WOW Animation ////////////////////////////////
 		new WOW().init();
 
+
+		
+		// Bg follow to /////////////////////////////////
 		var windw = this;
 
 		$.fn.followTo = function ( pos ) {
@@ -133,7 +176,7 @@ body.daisy
 
 
 
-		
+		// Parallax ////////////////////////////////////
 		$.fn.parallax = function ( pos ){
 			var $this = this,
 				scrolled = $(window).scrollTop();
@@ -156,7 +199,6 @@ body.daisy
 		});
 
 
-
 		//- $(window).scroll(function(e){
 		//- 	$('.daisy-main').animate(
 		//- 		{
@@ -164,4 +206,17 @@ body.daisy
 		//- 		},
 		//- 	400);
 		//- });
+
+
+
+
+
+
+		// Slider /////////////////////////////////////
+		$(function() {
+			$('.slide-line').slideLine({
+				ratio: 0.99
+			});
+		});
+
 

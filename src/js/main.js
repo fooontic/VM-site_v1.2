@@ -5,5 +5,6 @@
 //= vendor/jquery.countup.js
 //= vendor/jquery.event.move.js
 //= vendor/jquery.twentytwenty.js
+//= vendor/slider.js
 
 //= switcher.js
