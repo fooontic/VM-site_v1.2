@@ -1,0 +1,32 @@
+.wip {
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	margin: .5em 0 0 .5em;
+	padding: .15em .25em .1em .35em;
+	border: 2px solid;
+	letter-spacing: .1em;
+	cursor: help;
+	position: relative;
+
+	&:after {
+		content: 'Work In Progress';
+		display: none;
+		position: absolute;
+		padding: 5px 10px;
+		background-color: #fff;
+		color: #333;
+		bottom: -90%;
+		width: 120px;
+		font-size: .5em;
+		letter-spacing: 0;
+		left: 0;
+		box-shadow: 0 3px 10px fade-out(#333, .8);
+		border-radius: 2px;
+
+	}
+
+	&:hover:after {
+		display: block;
+	}
+}

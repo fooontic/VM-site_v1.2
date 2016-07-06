@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	:verbatim
+	include ../mixins/head.jade
+	+head('Дизайн сервиса Daisy Extreme', 'nested')
+
+	link(href="https://fonts.googleapis.com/css?family=PT+Serif:400i&subset=cyrillic" rel="stylesheet")
+
+body.daisy
+	
+	:verbatim
+	include ../mixins/header.jade
+	+header('nested')
+
+	.daisy-bg
+	section.daisy-subheader
+		
+		h1.daisy-subheader__title Daisy Extreme
+			span.wip WIP
+		
+		.container-fluid
+			.row
+				.col-lg-1.col-lg-offset-1
+					p.project__year 2014
+
+				.col-lg-8
+					p.daisy-subheader__flow Передо мной стояла задача нарисовать дизайн сайта для поиска активного отдыха. Diasy Extreme один из самых крупных проектов, над которым я работал. Функционал сервиса включает в себя: поиск площадок и предложений для спортивного отдыха, покупка билетов, сравнение предложений и отзывов, общение. Для компаний разрабатывается интерфейс добавления своих предложений и их настройка, учет бронирования и статистика. 
+					p.daisy-subheader__flow Сайт спроектирован адаптивным, чтобы комфортно пользоваться на компьютере, телефонах и планшетах. Помимо дизайн-макетов, я сверстал подобие UI-Kit основных элементов для легкого понимания плавности анимаций на сайте  в дальнейшем. 
+					p.daisy-subheader__flow.important-icon Проект в работе. Представленная ниже версия не окончательная и может дорабатываться. 
+
+				.col-lg-2
+					.project__madein
+						p Выражаю благодарность всем, кто работает над проектом вместе со мной: 
+						p Менеджер проекта: Артур&nbsp;Якубаускас
+						p Программист: Антон&nbsp;Воробьев
+						p Верстальщик: Александр&nbsp;Баландин
+
+
+	section.daisy-main
+		.row
+			.daisy-main__1200
+				img(src="../img/daisy__main--1200.jpg", alt="")
+
+			.daisy-main__320
+				img(src="../img/daisy__main--320.jpg", alt="")
+
+			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+				p.project__flow Главная страница сайта рассказывает о сервисе и сообщает о горячих предложениях по региону пользователя. 
+
+
+	section.daisy-category
+		.container-fluid
+			.row
+				.col-xs-9.col-md-10
+					.daisy-category__img
+						img(src="../img/daisy__category.jpg", alt="")
+
+				.col-xs-3.col-md-2
+					.daisy-category__grid
+						img(src="../img/daisy__cat-grid.png", alt="")
+
+
+				.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+					p.project__flow Для каждого вида спорта будет нарисована своя иконка в&nbsp;запоминающимся стиле. Чтобы&nbsp;просматривать страницу категорий было интереснее, я&nbsp;разработал простую сетку для&nbsp;компановки элементов. 
+
+
+	section.daisy-search
+		.row
+			.col-xs-12.col-md-8.col-md-offset-4
+				.daisy-search__list
+					img(src="../img/daisy__list.jpg", alt="")
+
+			.daisy-search__map
+				img(src="../img/daisy__map.jpg", alt="")
+
+			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+				p.project__flow Выдачу предложений можно смотреть списком и на карте. 
+
+
+	section.daisy-business
+		.row
+			.col-xs-12.col-md-8.col-md-offset-4
+				.daisy-business__offer
+					img(src="../img/daisy__offer.jpg", alt="")
+
+			.daisy-business__company.wow.fadeInLeft
+				img(src="../img/daisy__company.jpg", alt="")
+
+			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
+				p.project__flow Страницы компании и предложения. 
+
+
+
+
+
+
+
+
+
+	script(src="../js/main.min.js")
+
+	script.
+
+		new WOW().init();
+
+		var windw = this;
+
+		$.fn.followTo = function ( pos ) {
+			var $this = this,
+				$window = $(windw);
+
+				$(window).scroll(function(e){
+					if ($window.scrollTop() > pos) {
+						$this.css({
+							position: 'absolute',
+							top: pos + bgTop
+						});
+
+					} else {
+						$this.css({
+							position: 'fixed',
+							top: '122px'
+						})
+					}
+				})
+		}
+
+		var bgTop = 122;
+
+		$('.daisy-bg').followTo(379);
+
+
+
+
+		
+		$.fn.parallax = function ( pos ){
+			var $this = this,
+				scrolled = $(window).scrollTop();
+			//- var scrolledMain = $(window).scrollTop(653);
+
+			$this.css('bottom', (pos + scrolled * 0.4) + 'px');
+		}
+
+		$(window).scroll(function(e){
+			$('.daisy-main__320').parallax(500);
+		});
+
+
+		$(window).scroll(function(e){
+			if ($(window).scrollTop() > 3500) {
+				var scrolled = $(window).scrollTop();
+
+				$('.daisy-search__map').css('bottom', (-600 + scrolled / 4) + 'px');
+			}
+		});
+
+
+
+		//- $(window).scroll(function(e){
+		//- 	$('.daisy-main').animate(
+		//- 		{
+		//- 			top: "-400px"
+		//- 		},
+		//- 	400);
+		//- });
+
