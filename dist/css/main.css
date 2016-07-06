@@ -5808,6 +5808,14 @@ button
     background-size: cover;
 }
 
+.daisy img
+{
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}
+
 .daisy-subheader
 {
     padding: 60px 0 160px;
@@ -5890,13 +5898,6 @@ button
     border-radius: 3px 3px 7px 7px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
 }
-.daisy-main__1200 img
-{
-    display: block;
-
-    max-width: 100%;
-    height: auto;
-}
 .daisy-main__320
 {
     position: absolute;
@@ -5929,7 +5930,8 @@ button
     color: #fff; 
     background-color: #2466bc;
 }
-.daisy-category__img
+.daisy-category__img,
+.daisy-blog__img
 {
     overflow: hidden;
 
@@ -6119,6 +6121,42 @@ button
 .daisy-cabinet .project__flow
 {
     margin-top: 38px;
+}
+
+.daisy-blog
+{
+    padding: 100px 0 50px;
+}
+
+.daisy-graphics
+{
+    padding: 80px 0 100px;
+}
+
+.daisy-mistakes
+{
+    width: auto;
+    height: 1000px;
+    margin-top: 50px;
+    padding-top: 110px; 
+
+    background-image: url('../img/daisy__skate-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+.daisy-mistakes__403,
+.daisy-mistakes__404
+{
+    display: none;
+    overflow: hidden;
+
+    border-radius: 33px;
+    box-shadow: -10px 20px 70px rgba(0, 0, 0, .2);
+}
+.daisy-mistakes .project__flow
+{
+    padding-top: 70px;
 }
 
 .slider
