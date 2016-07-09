@@ -6159,6 +6159,13 @@ button
     padding-top: 70px;
 }
 
+.daisy-loader__inner
+{
+    width: 150px;
+    height: auto; 
+    margin: 80px auto 50px;
+}
+
 .slider
 {
     position: relative;
