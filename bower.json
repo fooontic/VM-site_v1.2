@@ -2,7 +2,7 @@
   "name": "vm-site",
   "version": "1.2.0",
   "description": "Quik portfolio site",
-  "homepage": "https://github.com/fooontic/VM-site",
+  "homepage": "",
   "authors": [
     "Vadik Matveev"
   ],
@@ -10,7 +10,6 @@
   "moduleType": [
     "node"
   ],
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -21,6 +20,7 @@
   "dependencies": {
     "bootstrap": "4.0",
     "animate.css": "~3.4.0",
-    "wow": "~1.1.2"
+    "wow": "~1.1.2",
+    "vivus": "~0.3.1"
   }
 }

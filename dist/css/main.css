@@ -3858,31 +3858,58 @@ button
     list-style-type: none;
 }
 
+.about
+{
+    min-width: 320px;
+    max-width: 1170px; 
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 .about__blog-item
 {
     margin-bottom: 10px;
 }
-
 .about__blog-link
 {
     display: inline-block;
 }
-
 .about__blog-date
 {
     display: block;
 
     color: #807c7c;
 }
-
 .about__flow
 {
     margin: 0 0 1em;
 }
-
 .about__photo
 {
-    margin-bottom: 20px;
+    position: relative;
+
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 37.5%;
+        -ms-flex: 0 0 37.5%;
+            flex: 0 0 37.5%;
+}
+.about__me
+{
+    position: relative;
+
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 62.5%;
+        -ms-flex: 0 0 62.5%;
+            flex: 0 0 62.5%;
 }
 
 .wip
@@ -4080,12 +4107,24 @@ button
     }
 }
 
+.main img
+{
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}
+
 .main-header
 {
+    position: relative;
+    z-index: 0; 
+
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display:         flex;
+    overflow: hidden;
 
     min-height: 700px;
     padding: 30px 0 30px;
@@ -4094,8 +4133,8 @@ button
             animation: mainHeaderBgAnim 20s ease infinite;
 
     color: #fff;
-    background: -webkit-linear-gradient(138deg, rgba(123, 51, 128, .5), rgba(58, 64, 133, .5));
-    background:         linear-gradient(312deg, rgba(123, 51, 128, .5), rgba(58, 64, 133, .5));
+    background: -webkit-linear-gradient(138deg, rgba(123, 51, 128, .4), rgba(58, 64, 133, .4));
+    background:         linear-gradient(312deg, rgba(123, 51, 128, .4), rgba(58, 64, 133, .4));
     background-color: #000;
     background-size: 400% 400%;
 
@@ -4105,6 +4144,9 @@ button
 }
 .main-header__container
 {
+    position: relative;
+    z-index: 2; 
+
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -4206,6 +4248,34 @@ button
             transition: opacity .1s; 
 
     opacity: 1;
+}
+.main-header__bg-anim-container
+{
+    position: absolute;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.vm-logo-animation
+{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+.vm-logo-animation object
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    -webkit-transform: translate(20%, -50%);
+        -ms-transform: translate(20%, -50%);
+            transform: translate(20%, -50%);
 }
 
 .temp,

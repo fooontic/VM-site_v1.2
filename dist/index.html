@@ -17,6 +17,9 @@
 
   <body class="main">
     <div class="main-header">
+      <div class="main-header__bg-anim-container">
+        <div class="vm-logo-animation"> <object id="vm-logo" type="image/svg+xml" data="img/vm-logo__bg-anim.svg"></object> </div>
+      </div>
       <div class="main-header__container">
         <div class="row">
           <div class="main-header__logo col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-0"> <svg version="1.1" id="main-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="logo" width="212px" height="40.9166679px" viewBox="0 0 212 40.9166679" enable-background="new 0 0 212 40.9166679"
@@ -111,9 +114,21 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid about">
+    <div class="about">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-5">
+        <div class="col-xs-12 col-lg-8">
+          <h2 class="h2">Коротко о себе</h2>
+          <div class="row">
+            <div class="about__photo"><img src="img/my-face.jpg" alt="Vadik Matveev"></div>
+            <div class="about__me">
+              <p class="about__flow">Проектирую сайты, мобильные приложения, логотипы и фирменные стили. Часто сам верстаю разработанные веб-проекты. Знаю HTML и CSS, но использую Jade и SASS/Less. Осваиваю JavaScript. Почитать подробнее о моих навыках и опыт работы можно в
+                <a class="link">резюме (pdf 1,2 MB) </a> или в <a href="" class="link">LinkedIn</a> . </p>
+              <p class="about__flow">В свободное время люблю порисовать буквы, сходить на концерт, поиграть в настольные игры или прогуляться по Санкт-Петербургу. Изредко пишу в <a href="http://fooontic.tumblr.com/" class="link">блоге</a>. Немножко разбираюсь в кофе. Пью пиво
+                и вино. Не курю. Слегка заикаюсь.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <h2 class="h2">Последнее в <a href="http://fooontic.tumblr.com/" class="link">блоге</a></h2>
           <div class="about__blog-item"><a href="http://fooontic.tumblr.com/post/129658017522/%D1%8D%D0%BC%D0%BE%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%B2%D0%B5%D0%B1-%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD" class="about__blog-link link">Эмоциональный веб-дизайн. Аарон Уолтер </a>
             <span
@@ -126,16 +141,6 @@
           <div class="about__blog-item"><a href="http://fooontic.tumblr.com/post/119017948867/%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%BF%D1%80%D0%B8%D0%B2%D1%8B%D1%87%D0%BD%D1%8B%D1%85-%D0%B2%D0%B5%D1%89%D0%B5%D0%B9" class="about__blog-link link">Дизайн привычных вещей. Дональд Норман </a>
             <span
               class="about__blog-date">26.05.15</span>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-7">
-          <h2 class="h2">О себе</h2>
-          <div class="row">
-            <div class="col-xs-6 col-sm-4"><img src="img/my-face.jpg" alt="Vadik Matveev" class="about__photo img-fluid"></div>
-            <div class="col-xs-12 col-sm-8">
-              <p class="about__flow">Дизайнер. Проектирую сайты, мобильные приложения, логотипы и фирменные стили. Сам верстаю разработанные веб-проекты. Знаю HTML и CSS, но использую Jade и Less. </p>
-              <p class="about__flow">В свободное время люблю порисовать буквы, сходить на концерт, поиграть в настольные игры или прогуляться по Санкт-Петербургу. Пью кофе, пиво и вино. Не курю. </p>
-            </div>
           </div>
         </div>
       </div>
@@ -153,47 +158,53 @@
   </body>
   <script src="js/main.js"></script>
   <script>
-    $(function()
+    var vmVivus = new Vivus('vm-logo',
     {
-      $('#countUp').countup(
-      {
-        start: new Date("Apr 15, 2016 00:00:00")
-      });
+      type: 'delayed',
+      duration: 1500,
+      delay: 700
     });
-    $('.repair__after').click(function()
-    {
-      $("body").animate(
-      {
-        backgroundColor: "#ef453c"
-      }, 200);
-      $("body").animate(
-      {
-        backgroundColor: "#ffffff"
-      }, 500);
-      $("body").animate(
-      {
-        backgroundColor: "#ef453c"
-      }, 200);
-      $("body").animate(
-      {
-        backgroundColor: "#ffffff"
-      }, 500);
-      $("body").animate(
-      {
-        backgroundColor: "#ef453c"
-      }, 200);
-      $("body").animate(
-      {
-        backgroundColor: "#ffffff"
-      }, 500);
-    });
-    //- $(function() {
-    //- 	$( "#effect" ).animate({
-    //- 		backgroundColor: "#aa0000",
-    //- 		color: "#fff",
-    //- 		width: 500
-    //- 	}, 1000 );
-    //- });
+    //- var vivusTimer = setTimeout(function drawVivus() {
+    //- 	vmVivus.stop().play(-1);
+    //- 	vivusTimer = setTimeout(drawVivus, 2000);
+    //- 	console.log('?')
+    //- }, 2000);
+    //- setInterval(function() {vmVivus.play(-1) }, 1000);
+    //- function easeOutBounce (x) {
+    //- 	var base = -Math.cos(x * (0.5 * Math.PI)) + 1;
+    //- 	var rate = Math.pow(base,1.5);
+    //- 	var rateR = Math.pow(1 - x, 2);
+    //- 	var progress = -Math.abs(Math.cos(rate * (2.5 * Math.PI) )) + 1;
+    //- 	return (1- rateR) + (progress * rateR);
+    //- }
+    //- var timing,
+    //- 	timingProps = {
+    //- 		type: 'delayed',
+    //- 		duration: 150,
+    //- 		start: 'autostart',
+    //- 		pathTimingFunction: Vivus.LINEAR,
+    //- 		animTimingFunction: Vivus.LINEAR
+    //- 	};
+    //- function timingTest (buttonEl, property, type) {
+    //- 	var activeSibling = buttonEl.parentNode.querySelector('button.active');
+    //- 	activeSibling.classList.remove('active');
+    //- 	buttonEl.classList.add('active');
+    //- 	timingProps.type = (property === 'type') ? type : timingProps.type;
+    //- 	timingProps.pathTimingFunction = (property === 'path') ? Vivus[type] : timingProps.pathTimingFunction;
+    //- 	timingProps.animTimingFunction = (property === 'anim') ? Vivus[type] : timingProps.animTimingFunction;
+    //- 	timing && timing.stop().destroy();
+    //- 	timing = new Vivus('timing-example', timingProps);
+    //- }
+    //- var hi = new Vivus('hi-there', {type: 'scenario-sync', duration: 20, start: 'autostart', dashGap: 20, forceRender: false},
+    //- 	function () {
+    //- 		if (window.console) {
+    //- 			console.log('Animation finished. [log triggered from callback]');
+    //- 		}
+    //- 	}),
+    //- 	obt1 = new Vivus('obturateur1', {type: 'delayed', duration: 150}),
+    //- 	obt2 = new Vivus('obturateur2', {type: 'async', duration: 150}),
+    //- 	obt3 = new Vivus('obturateur3', {type: 'oneByOne', duration: 150}),
+    //- 	pola = new Vivus('polaroid', {type: 'scenario-sync', duration: 20, forceRender: false});
   </script>
 
 </html>

@@ -25,6 +25,15 @@ html(lang="ru")
 		//- include ./components/projects.jade
 		
 		.main-header
+
+			.main-header__bg-anim-container
+
+				.vm-logo-animation
+					object(id="vm-logo" type="image/svg+xml" data="img/vm-logo__bg-anim.svg")
+					
+
+
+
 			.main-header__container
 				.row
 					.main-header__logo.col-xs-10.col-xs-offset-1.col-md-3.col-md-offset-0.
@@ -136,9 +145,29 @@ html(lang="ru")
 
 
 
-		.container-fluid.about
+		.about
 			.row
-				.col-xs-12.col-sm-6.col-md-5
+				.col-xs-12.col-lg-8
+					h2.h2 Коротко о себе
+
+					.row
+						.about__photo
+							img(src="img/my-face.jpg",alt="Vadik Matveev")
+
+						.about__me
+							p.about__flow Проектирую сайты, мобильные приложения, логотипы и фирменные стили. Часто сам верстаю разработанные веб-проекты. Знаю HTML и CSS, но использую Jade и SASS/Less. Осваиваю JavaScript. Почитать подробнее о моих навыках и опыт работы можно в 
+								a.link резюме (pdf 1,2 MB) 
+								|  или в 
+								a.link(href="") LinkedIn
+								|  . 
+
+							p.about__flow В свободное время люблю порисовать буквы, сходить на концерт, поиграть в настольные игры или прогуляться по Санкт-Петербургу. Изредко пишу в 
+								a.link(href="http://fooontic.tumblr.com/") блоге
+								| . Немножко разбираюсь в кофе. Пью пиво и вино. Не курю. Слегка заикаюсь.
+
+
+
+				.col-xs-12.col-sm-6.col-md-4
 					h2.h2 Последнее в 
 						a.link(href="http://fooontic.tumblr.com/") блоге
 
@@ -155,16 +184,6 @@ html(lang="ru")
 						span.about__blog-date 26.05.15
 
 
-				.col-xs-12.col-sm-6.col-md-7
-					h2.h2 О себе
-
-					.row
-						.col-xs-6.col-sm-4
-							img.about__photo.img-fluid(src="img/my-face.jpg",alt="Vadik Matveev")
-
-						.col-xs-12.col-sm-8
-							p.about__flow Дизайнер. Проектирую сайты, мобильные приложения, логотипы и фирменные стили. Сам верстаю разработанные веб-проекты. Знаю HTML и CSS, но использую Jade и Less. 
-							p.about__flow В свободное время люблю порисовать буквы, сходить на концерт, поиграть в настольные игры или прогуляться по Санкт-Петербургу. Пью кофе, пиво и вино. Не курю. 
 
 
 
@@ -181,47 +200,64 @@ html(lang="ru")
 	script(src="js/main.js")
 
 	script.
-		$(function(){
-			
-			$('#countUp').countup({
-				start: new Date("Apr 15, 2016 00:00:00")
-			});
-			
-		});
+		
+		var vmVivus = new Vivus('vm-logo', {type: 'delayed', duration: 1500, delay: 700	});
+
+
+		//- var vivusTimer = setTimeout(function drawVivus() {
+		//- 	vmVivus.stop().play(-1);
+		//- 	vivusTimer = setTimeout(drawVivus, 2000);
+		//- 	console.log('?')
+		//- }, 2000);
+
+		//- setInterval(function() {vmVivus.play(-1) }, 1000);
+		
 
 		
-		$('.repair__after').click(function(){
 
-			$("body").animate({
-				backgroundColor: "#ef453c"
-			}, 200 );
-			$("body").animate({
-				backgroundColor: "#ffffff"
-			}, 500 );
-			$("body").animate({
-				backgroundColor: "#ef453c"
-			}, 200 );
-			$("body").animate({
-				backgroundColor: "#ffffff"
-			}, 500 );
-			$("body").animate({
-				backgroundColor: "#ef453c"
-			}, 200 );
-			$("body").animate({
-				backgroundColor: "#ffffff"
-			}, 500 );
-			
+		
+		//- function easeOutBounce (x) {
+		//- 	var base = -Math.cos(x * (0.5 * Math.PI)) + 1;
+		//- 	var rate = Math.pow(base,1.5);
+		//- 	var rateR = Math.pow(1 - x, 2);
+		//- 	var progress = -Math.abs(Math.cos(rate * (2.5 * Math.PI) )) + 1;
+		//- 	return (1- rateR) + (progress * rateR);
+		//- }
+		
+		//- var timing,
+		//- 	timingProps = {
+		//- 		type: 'delayed',
+		//- 		duration: 150,
+		//- 		start: 'autostart',
+		//- 		pathTimingFunction: Vivus.LINEAR,
+		//- 		animTimingFunction: Vivus.LINEAR
+		//- 	};
 
-		});
+		//- function timingTest (buttonEl, property, type) {
+		//- 	var activeSibling = buttonEl.parentNode.querySelector('button.active');
+		//- 	activeSibling.classList.remove('active');
+		//- 	buttonEl.classList.add('active');
+
+		//- 	timingProps.type = (property === 'type') ? type : timingProps.type;
+		//- 	timingProps.pathTimingFunction = (property === 'path') ? Vivus[type] : timingProps.pathTimingFunction;
+		//- 	timingProps.animTimingFunction = (property === 'anim') ? Vivus[type] : timingProps.animTimingFunction;
+
+		//- 	timing && timing.stop().destroy();
+		//- 	timing = new Vivus('timing-example', timingProps);
+		//- }
+
+		//- var hi = new Vivus('hi-there', {type: 'scenario-sync', duration: 20, start: 'autostart', dashGap: 20, forceRender: false},
+		//- 	function () {
+		//- 		if (window.console) {
+		//- 			console.log('Animation finished. [log triggered from callback]');
+		//- 		}
+		//- 	}),
+		//- 	obt1 = new Vivus('obturateur1', {type: 'delayed', duration: 150}),
+		//- 	obt2 = new Vivus('obturateur2', {type: 'async', duration: 150}),
+		//- 	obt3 = new Vivus('obturateur3', {type: 'oneByOne', duration: 150}),
+		//- 	pola = new Vivus('polaroid', {type: 'scenario-sync', duration: 20, forceRender: false});
+		
+		
 
 
-		//- $(function() {
-			
-		//- 	$( "#effect" ).animate({
-		//- 		backgroundColor: "#aa0000",
-		//- 		color: "#fff",
-		//- 		width: 500
-		//- 	}, 1000 );
-			
-		//- });
 		
