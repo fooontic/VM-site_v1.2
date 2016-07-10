@@ -1,4 +1,4 @@
-doctype html
+<!DOCTYPE html>
 html(lang="ru")
 	
 	head
@@ -28,7 +28,7 @@ html(lang="ru")
 		
 		section.main-header
 
-			.main-header__bg-anim-container
+			.hidden-xs-down.main-header__bg-anim-container
 
 				.vm-logo-animation
 					object(id="vm-logo" type="image/svg+xml" data="img/vm-logo__bg-anim.svg")
@@ -38,7 +38,7 @@ html(lang="ru")
 
 			.main-header__container
 				.row
-					.main-header__logo.col-xs-10.col-xs-offset-1.col-md-3.col-md-offset-0.
+					.main-header__logo.col-xs-10.col-md-3.col-md-offset-0.
 						<svg version="1.1" id="main-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="logo"
 							width="212px" height="40.9166679px" viewBox="0 0 212 40.9166679" enable-background="new 0 0 212 40.9166679" fill="#fff"
 							xml:space="preserve">
@@ -114,99 +114,53 @@ html(lang="ru")
 							h3.main-header__flow Дизайнер // 25 лет // Санкт-Петербург
 
 				.main-header__contact
-					.col-xs-12.col-md-5.col-lg-4 
+					.col-xs-12.col-md-4 
 						span.main-header__mailto Писать на 
 							a(href="mailto:fooontic@gmail.com").link fooontic@gmail.com
 					.col-xs-12.col-md-4.col-lg-3
 						span.main-header__blog Пишу в 
 							a(href="http://fooontic.tumblr.com/").link блоге
 							|  (редко)
-					.col-xs-12.col-md-3
+					.col-xs-12.col-md-4
 						a(href="Vadik Matveev.pdf" target="_blank").main-header__cv.link Резюме
-						span  (pdf 1,2 MB)
+						span.main-header__cv-size  (pdf 1,2 MB)
 
 					.col-xs-12
 						ul.main-header__soc-link
+							
 							li.main-header__soc-link-item
-								a.link(href="") Facebook
+								a.link(href="https://twitter.com/fooontic_" target="_blank") Twitter
 							li.main-header__soc-link-item
-								a.link(href="") Twitter
+								a.link(href="https://www.instagram.com/fooontic/" target="_blank") Instagram
 							li.main-header__soc-link-item
-								a.link(href="") Вконтакте
+								a.link(href="https://vk.com/fooontic" target="_blank") Вконтакте
 							li.main-header__soc-link-item
-								a.link(href="") Instagram
+								a.link(href="https://www.facebook.com/ba.dick.7" target="_blank") Facebook
 							li.main-header__soc-link-item
-								a.link(href="") Behance
+								a.link(href="http://www.last.fm/user/fooontic" target="_blank") LastFm	
 							li.main-header__soc-link-item
-								a.link(href="") LinkedIn
+								a.link(href="https://www.behance.net/fooontic" target="_blank") Behance
+							li.main-header__soc-link-item
+								a.link(href="https://github.com/fooontic" target="_blank") GitHub
+							li.main-header__soc-link-item
+								a.link(href="https://www.linkedin.com/in/%D0%B2%D0%B0%D0%B4%D0%B8%D0%BC-%D0%BC%D0%B0%D1%82%D0%B2%D0%B5%D0%B5%D0%B2-1359a2108?trk=nav_responsive_tab_profile_pic" target="_blank") LinkedIn
 
 
 
 
-		article.projects
-			h2.h2 Проекты
 
-			ul.projects__list
+		//- PROJECTS BLOCK //////////
 
+		:verbatim
+		include ./components/projects.jade
 
-				li.projects__item.projects__item--wide
-					a(href="projects/daisy.html").projects__pic
-						img(src="http://placehold.it/1000x480", alt="")
-					h3.projects__title
-						a.link(href="projects/daisy.html") Daisy Extreme // Веб-сервис
-					.projects__tags Веб-дизайн
-
-
-				li.projects__item.projects__item--small
-					a(href="#").projects__pic
-						img(src="http://placehold.it/1000x480", alt="")
-					h3.projects__title
-						a.link(href="#") Фанера // Журнал (Скоро будет)
-					.projects__tags Дизайн журнала, верстка
-
-
-				li.projects__item.projects__item--half
-					a(href="projects/tmsr.html").projects__pic
-						img(src="http://placehold.it/1000x480", alt="")
-					h3.projects__title
-						a.link(href="projects/tmsr.html") TMSR // Фирменный стиль и сайт
-					.projects__tags Графический дизайн, веб-дизайн, веб-разработка
-
-
-				li.projects__item.projects__item--half
-					a(href="projects/whatobuy.html").projects__pic
-						img(src="http://placehold.it/1000x480", alt="")
-					h3.projects__title
-						a.link(href="projects/whatobuy.html") Чокупить? // Мобильное приложение
-					.projects__tags Дизайн мобильного приложения
-
-
-				li.projects__item.projects__item--small
-					a(href="projects/logomotiv.html").projects__pic
-						img(src="http://placehold.it/1000x480", alt="")
-					h3.projects__title
-						a.link(href="projects/logomotiv.html") Logomotiv Apps // Сайт для студии
-					.projects__tags Веб-дизайн, веб-разработка
-
-
-				li.projects__item.projects__item--small
-					a(href="projects/durecipes_app.html").projects__pic
-						img(src="http://placehold.it/1000x480", alt="")
-					h3.projects__title
-						a.link(href="projects/durecipes_app.html") Дюрецепты // Мобильное приложение
-					.projects__tags Дизайн мобильного приложения
-
-
-				li.projects__item.projects__item--small
-					a(href="projects/durecipes_logo.html").projects__pic
-						img(src="http://placehold.it/1000x480", alt="")
-					h3.projects__title
-						a.link(href="projects/durecipes_logo.html") Дюрецепты // Логотип и иконка
-					.projects__tags Графический дизайн
+		//- PROJECTS BLOCK //////////
 
 
 
 
+
+		//- ABOUT BLOCK //////////
 
 		article.about
 			.row
@@ -217,35 +171,43 @@ html(lang="ru")
 						
 						.about__photo
 							img(src="img/my-face.jpg",alt="Vadik Matveev")
-								
+
 						.about__me
-							p.about__flow Проектирую сайты, мобильные приложения, логотипы и фирменные стили. Часто сам верстаю разработанные веб-проекты. Закончил курсы по основам After Effects в московской школе компьютерной графики Real-Time School в 2013 году. В 2015-2016 прошел два курса по верстке сайтов (базовый и PRO) и один курс по основам JS. Знаю HTML и CSS, но использую Jade и SASS/Less. Продолжаю осваиваивать JavaScript. Теперь помогаю и проверяю дипломные работы студентов школы Epic Skills, в качестве тьютора. Почитать подробнее о моих навыках и опыт работы можно в 
+							p.about__flow Проектирую сайты, мобильные приложения, логотипы и&nbsp;фирменные стили. Часто сам верстаю разработанные веб-проекты. Закончил курсы по&nbsp;основам After Effects в&nbsp;московской школе компьютерной графики Real-Time School в&nbsp;2013 году. В 2015-2016 прошел два курса по&nbsp;верстке сайтов (базовый и&nbsp;PRO) и&nbsp;один курс по&nbsp;основам JS в&nbsp;школе интернет технологий Epic Skills. Знаю HTML и&nbsp;CSS, но&nbsp;использую Jade и&nbsp;SASS/Less. Продолжаю осваиваивать JavaScript. Теперь помогаю и&nbsp;проверяю дипломные работы студентов школы Epic Skills, в&nbsp;качестве тьютора. Почитать подробнее о&nbsp;моих навыках и&nbsp;опыт работы можно в&nbsp;
 								a.link(href="Vadik Matveev.pdf" target="_blank") резюме (pdf 1,2 MB)
-								|  или в 
+								|  или в&nbsp;
 								a.link(href="") LinkedIn
 								|  . 
 
-							p.about__flow В свободное время люблю порисовать буквы, сходить на концерт, поиграть в настольные игры или прогуляться по Санкт-Петербургу. Изредко пишу в 
+							p.about__flow В&nbsp;свободное время люблю порисовать буквы, послушать новый альбом, сходить на концерт, поиграть в&nbsp;настольные игры или прогуляться по&nbsp;Санкт-Петербургу. Изредко пишу в&nbsp;
 								a.link(href="http://fooontic.tumblr.com/") блоге
-								| . Немножко разбираюсь в кофе. Пью пиво и вино. Не курю. Слегка заикаюсь.
+								| . Немножко разбираюсь в&nbsp;кофе. Пью пиво и&nbsp;вино. Не курю. Слегка заикаюсь.
 
-
+		
 
 
 
 				
-					
+				//- BLOG BLOCK //////////
+
 				:verbatim
 				include ./components/blog.jade
 
+				//- BLOG BLOCK //////////
+
+
+		//- ABOUT BLOCK //////////
 
 
 
 
 
+		//- FOOTER BLOCK //////////
 
 		:verbatim
 		include ./components/footer.jade
+
+		//- FOOTER BLOCK //////////
 
 
 

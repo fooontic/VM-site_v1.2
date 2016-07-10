@@ -1,8 +1,12 @@
 .blog {
 	@include make-col(30px);
 	flex: 0 0 100%;
+	margin-top: 40px;
 
-	@media ($min-md) { flex: 0 0 33.33333%;}
+	@media ($min-lg) { 
+		flex: 0 0 33.33333%;
+		margin-top: 0;
+	}
 	
 	&__box {
 		padding-left: 15px;
@@ -18,17 +22,18 @@
 	}
 
 	&__item {
-		margin-bottom: 1em;
+		margin-bottom: 1.4em;
 	}
 
 	&__link {
-		display: inline-block;
-		margin-bottom: .3em;
+		margin-right: 10px;
 	}
 
 	&__date {
-		display: block;
 		color: $gray;
 		font-size: $fz-s;
+		margin-top: .3em;
+
+		@media ($min-lg) { display: block;}
 	}
 }

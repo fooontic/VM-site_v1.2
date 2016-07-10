@@ -21,11 +21,15 @@ $italic: 			"PT Serif", "Times", "Times New Roman", serif;
 $oswald: 			"Oswald", "Arial", sans-serif;
 
 $fz: 				1em;
-$fz-12: 			.75em;
-$fz-s:				14px;
+$fz-xs: 			.75em;
+$fz-s:				.875em;
+$fz-b: 				1.3em;
+$fz-l: 				2.1em;
+
+$fz-35:				$fz-l;
+$fz-21:				$fz-b;
 $fz-16: 			16px;
-$fz-21: 			21px;
-$fz-35: 			2.1em;
+$fz-12:				$fz-xs;
 
 
 

@@ -11,14 +11,24 @@
 	&-inner {
 		display: flex;
 		flex-flow: row wrap;
+		margin-bottom: 2em;
 
 		@media ($min-md) {
 			justify-content: flex-end;
+			margin-bottom: 0;
 		}
 
 		& .share {
 			line-height: 2em;
 			margin-right: 20px;
+			width: 100%;
+			display: block;
+			margin-bottom: .5em;
+
+			@media ($min-md) {
+				display: inline;
+				width: auto;
+			}
 		}
 	}
 
