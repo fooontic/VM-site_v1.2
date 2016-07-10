@@ -1,0 +1,34 @@
+.blog {
+	@include make-col(30px);
+	flex: 0 0 100%;
+
+	@media ($min-md) { flex: 0 0 33.33333%;}
+	
+	&__box {
+		padding-left: 15px;
+		padding-bottom: 20px;
+		border: 1px solid #ddd;
+		border-radius: 7px;
+	}
+
+	&__list {
+		list-style-type: none;
+		padding: 0;
+		
+	}
+
+	&__item {
+		margin-bottom: 1em;
+	}
+
+	&__link {
+		display: inline-block;
+		margin-bottom: .3em;
+	}
+
+	&__date {
+		display: block;
+		color: $gray;
+		font-size: $fz-s;
+	}
+}
