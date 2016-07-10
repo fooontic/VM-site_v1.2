@@ -9,6 +9,8 @@ html(lang="ru")
 		+head('Дизайнер Вадик Матвеев', 'root')
 
 		link(href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css')
+
+		<meta property="og:image" content="img/my-face.jpg" /> 
 	
 
 	body.main
@@ -120,8 +122,8 @@ html(lang="ru")
 							a(href="http://fooontic.tumblr.com/").link блоге
 							|  (редко)
 					.col-xs-12.col-md-3
-						a(href="Vadik Matveev.pdf" target="_blank")
-						span.main-header__cv pdf 1,2 MB
+						a(href="Vadik Matveev.pdf" target="_blank").main-header__cv.link Резюме
+						span  (pdf 1,2 MB)
 
 					.col-xs-12
 						ul.main-header__soc-link
@@ -215,9 +217,10 @@ html(lang="ru")
 						
 						.about__photo
 							img(src="img/my-face.jpg",alt="Vadik Matveev")
+								
 						.about__me
 							p.about__flow Проектирую сайты, мобильные приложения, логотипы и фирменные стили. Часто сам верстаю разработанные веб-проекты. Закончил курсы по основам After Effects в московской школе компьютерной графики Real-Time School в 2013 году. В 2015-2016 прошел два курса по верстке сайтов (базовый и PRO) и один курс по основам JS. Знаю HTML и CSS, но использую Jade и SASS/Less. Продолжаю осваиваивать JavaScript. Теперь помогаю и проверяю дипломные работы студентов школы Epic Skills, в качестве тьютора. Почитать подробнее о моих навыках и опыт работы можно в 
-								a.link(href="Vadik Matveev.pdf" target="_blank") резюме (pdf 1,2 MB) 
+								a.link(href="Vadik Matveev.pdf" target="_blank") резюме (pdf 1,2 MB)
 								|  или в 
 								a.link(href="") LinkedIn
 								|  . 

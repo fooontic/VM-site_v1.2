@@ -21,6 +21,7 @@
     "bootstrap": "4.0",
     "animate.css": "~3.4.0",
     "wow": "~1.1.2",
-    "vivus": "~0.3.1"
+    "vivus": "~0.3.1",
+    "Likely": "ilyabirman-likely#~2.1.0"
   }
 }

@@ -2,15 +2,26 @@
 	color: $gray;
 	// margin: 100px 0 0;
 	border-top: 1px solid fade-out($gray, .85);
-	padding: 20px 0 10px;
+	padding: 20px 0 20px;
 }
 
 .likely {
 	margin: 15px -5px 10px;
+
+	&-inner {
+		display: flex;
+		flex-flow: row wrap;
+
+		@media ($min-md) {
+			justify-content: flex-end;
+		}
+
+		& .share {
+			line-height: 2em;
+			margin-right: 20px;
+		}
+	}
+
+	
 }
 
-@media (min-width: $screen-sm-min) {
-	.likely {
-		float: right;
-	}
-}
