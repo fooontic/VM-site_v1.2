@@ -1,44 +1,323 @@
 .header {
-	padding: 20px 0 30px;
+	color: #fff;
+	background-color: #000;
+	background: linear-gradient(312deg, fade-out(#7b3380, .6), fade-out(#3a4085, .6));
+	background-size: 400% 400%;
+	animation: mainHeaderBgAnim 20s ease infinite;
+	min-height: 40px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
 
-	& .hidden-xs {
-		color: $gray;
+	@media ($min-md) {
+		min-height: 70px;
 	}
 
-	&__mail-me span {
+
+	&__container {
+		@include make-fixed-container();
+		display: flex;
+		flex-flow: row wrap;
+		position: relative;
+		z-index: 6;
+		justify-content: space-between;
+
+		@media ($min-md) {
+			justify-content: flex-start;
+			align-items: center;
+		}
+	}
+	
+	//////////////////////
+	.b-a {
+		transition: all .25s;
+		content: "";
+		position: absolute;
+		left: 0;
+		height: 3px;
+		width: 25px;
+		background-color: rgba(255, 255, 255, 0.95);
+	}
+
+	.b-a-expanded {
+		transition: all .25s;
+		top: -0px;
+	}
+	//////////////////////
+
+	&__sandwich {
+		
 		display: block;
+		width: 40px;
+		height: 40px;
+		position: relative;
+
+		&:before {
+			@extend .b-a;
+			position: absolute;
+			top: 14px;
+		}
+
+		&:after {
+			@extend .b-a;
+			position: absolute;
+			bottom: 14px;
+		}	
+		
+		@media ($min-md) { display: none;}
+	  
 	}
 
-	.nav__logo {
-		margin-bottom: 30px;
+	&__logo {
+
+		padding: 10px 0 10px;
+		height: 40px;
+
+		@media ($min-md) { 
+			height: 70px;
+			padding: 15px 0 15px;
+			opacity: .8;
+			flex: 0 0 25%;
+			@include make-col(30px);
+			transition: opacity .4s;
+
+			&:hover {
+				opacity: 1;
+				transition: opacity .2s;
+			}
+		}
+
+		@media ($min-lg) { flex: 0 0 16.66667%;}
+		
+		& svg {
+			height: 20px;
+			width: auto;
+			margin: 0 auto;
+
+			@media ($min-md) { 
+				height: auto;
+				margin-left: -20px;
+			}
+		}
+
 	}
 
-	.nav__social {
-		margin-bottom: 20px;
+	&__nav {
+		width: 100%;
+		display: none;
+		background-color: #333;
+		position: absolute;
+		top: 40px;
+		left: 0;
+		transform: scaleY(.8);
+		opacity: 0;
+		transition: opacity .3s, transform .3s ease-in ;
+		transform-origin: top center;
+
+		@media ($min-md) {
+			display: block;
+			position: relative;
+			top: 0;
+			flex: 0 0 66.66667%;
+			opacity: 1;
+			transform: scale(1);
+			@include make-col(30px);
+			background-color: inherit;
+
+		}
+
+		@media ($min-lg) { flex: 0 0 75%;}
+
+		& a {
+			position: relative;
+			top: -20px;
+			opacity: 0;
+			transition: all .2s;
+
+			&:hover {
+				color: lighten($blue, 20%) !important;
+				text-decoration: none;
+			}
+
+			&:visited {
+				text-decoration: none;
+				color: #fff;
+			}
+
+			&:active {
+				text-decoration: none;
+				color: $blue;
+			}
+
+			&.active {
+				color: $blue;
+			}
+
+			@media ($min-md) {
+				opacity: 1;
+				top: 0;
+				padding: 0 15px;
+				line-height: 70px;
+			}		
+		}
+
+		&--expanded {
+			display: block;
+			opacity: 1;			
+			transform: scaleY(1);
+			transition: opacity .2s, transform .2s ease-out;
+
+			& a {
+				top: 0;
+				opacity: 1;
+				transition: opacity .6s, top .4s ease-out;
+			}
+
+
+		}
+
 	}
 
-}
+	&__nav-list {
+		list-style-type: none;
+		padding: 0;
+		text-align: center;
+		margin: 0;
 
-
-@media (min-width: $screen-sm-min) {
-
-	.header {
-		padding-bottom: 10px;
-
-		&__mail-me {
-			float: right;
+		@media ($min-md) {
+			font-size: 0;
+			text-align: left;
 		}
 	}
 
-	.nav__logo, .nav__social {
-		margin-bottom: 0;
+	&__nav-item {
+		font-size: $fz-b;
+		min-height: 60px;
+		border-bottom: 1px solid #3d3d3d;	
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+
+		
+
+		&:last-child {
+			border-bottom: 1px solid #222;
+
+			@media ($min-md){ border: none;}
+		}
+
+		@media ($min-md) {
+			display: inline-flex;
+			min-height: inherit;
+			font-size: 21px;
+			border: none;
+			margin-right: 20px;
+			height: 70px;
+		}
+
+		
 	}
 
-	.nav__blog, .nav__social {
-		margin-top: 23px;
+	&__next {
+		display: block;
+		width: 40px;
+		height: 40px;
+		position: relative; 
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 17px;
+			height: 17px;
+			border-left: 3px solid #fff;
+			border-bottom: 3px solid #fff;
+			transform: rotate(-135deg);
+			top: 12px;
+			right: 4px;
+		}
+
+		& &-word { display: none;}
+
+		@media ($min-md) {
+			order: 3;
+			flex: 0 0 8.33333%;
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 30px;
+				height: 3px;
+				right: 3px;
+				top: 19px;
+				background-color: #fff;
+				transform: scaleX(0);
+				transform-origin: right center;
+				transition: all 1s ease-in .2s;
+			}
+
+			&.headerHover:after {
+				transform: scaleX(1);
+				transition: all .6s ease-out;
+			}
+
+			& &-word {
+				display: block;
+				font-size: $fz-s;
+				text-transform: uppercase;
+				letter-spacing: .1em;
+				position: absolute;
+				right: 30px;
+				top: 50%;
+				opacity: 0;
+				transform: translateY(-50%);
+				transition: right .5s ease-in .2s, opacity .3s .2s;
+			}
+
+			&:hover &-word {
+				right: 50px;
+				// display: block;
+				opacity: .8;
+				transition: right .6s ease-out, opacity .2s .1s;
+				color: #fff;
+
+			}
+
+		}
+	}
+}
+
+
+.darkenSite {
+
+	& .site-cache {
+		position: absolute;
+		top: 40px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 1500px;
+		background-color: rgba(0,0,0,0.5);
+		transition: all .4s;
+
+		@media ($min-md) {
+			display: none;
+		}
 	}
 
-	.nav__mail {
-		margin-top: 5px;
+	& .header__sandwich {
+
+		&:before {
+			transform: rotate(45deg);
+			top: 18px;
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+			bottom: 19px;
+		}
 	}
 }

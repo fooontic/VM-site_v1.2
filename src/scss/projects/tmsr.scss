@@ -6,6 +6,9 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center ;
+		margin-top: 40px;
+
+		@media ($min-md){ margin-top: 70px;}
 
 		@media (min-width: $screen-lg-min) {
 			height: 700px;

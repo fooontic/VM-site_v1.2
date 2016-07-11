@@ -10,3 +10,4 @@
 //= vendor/slider.js
 
 //= switcher.js
+//= sandwich.js
