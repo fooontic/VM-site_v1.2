@@ -8,8 +8,9 @@
 		background-image: svg-load('../img/logomotiv__pattern.svg');
 		background-size: 9px 9px;
 		background-repeat: repeat;
+		margin-top: 40px;
 		// background-position: center;
-
+		@media ($min-md) { margin-top: 70px;}
 
 	}
 
@@ -47,6 +48,9 @@
 		@include make-container();
 		min-width: 320px;
 		max-width: 1200px;
+		padding-bottom: 50px;
+
+		@media ($min-md){ padding-bottom: 100px;}
 	}
 
 	&__case-compare {

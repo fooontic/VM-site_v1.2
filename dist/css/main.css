@@ -3381,7 +3381,7 @@ button
     right: 0;
     left: 0;
 
-    min-height: 40px;
+    height: 40px;
 
     -webkit-animation: mainHeaderBgAnim 20s ease infinite;
             animation: mainHeaderBgAnim 20s ease infinite;
@@ -3396,7 +3396,7 @@ button
 {
     .header
     {
-        min-height: 70px;
+        height: 70px;
     }
 }
 .header__container
@@ -3827,22 +3827,21 @@ button
         font-size: .875em;
 
         position: absolute;
-        top: 50%;
+        top: 11px;
         right: 30px;
 
         display: block;
 
         -webkit-transition: right .5s ease-in .2s, opacity .3s .2s;
                 transition: right .5s ease-in .2s, opacity .3s .2s; 
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
         letter-spacing: .1em;
         text-transform: uppercase;
 
         opacity: 0;
     }
-    .header__next:hover .header__next-word
+    .header__next:hover .header__next-word,
+    .header__next:visited .header__next-word,
+    .header__next:active .header__next-word
     {
         right: 50px;
 
@@ -6094,7 +6093,7 @@ button
 .project__madein,
 .project__team
 {
-    font-size: .75em;
+    font-size: 12px;
     line-height: 1.5;
 
     margin: 48px 0 30px;
@@ -6131,8 +6130,9 @@ button
 .whatobuy__promo
 {
     position: relative;
-    z-index: 5; 
+    z-index: 5;
 
+    margin-top: 70px; 
     padding: 100px 0 100px;
 
     background-color: #34d0d9;
@@ -6140,6 +6140,13 @@ button
     background-repeat: repeat;
     background-size: 5px 5px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .15);
+}
+@media (min-width: 768px)
+{
+    .whatobuy__promo
+    {
+        margin-top: 70px;
+    }
 }
 @media (min-width: 992px)
 {
@@ -6299,9 +6306,17 @@ button
 
 .dur-app__promo
 {
-    padding: 50px 0; 
+    margin-top: 40px; 
+    padding: 50px 0;
 
     background-color: #dc516b;
+}
+@media (min-width: 768px)
+{
+    .dur-app__promo
+    {
+        margin-top: 70px;
+    }
 }
 
 .dur-app__promo-logo
@@ -6429,9 +6444,10 @@ button
 {
     position: relative;
 
-    overflow: hidden; 
+    overflow: hidden;
 
     height: 70vh;
+    margin-top: 40px; 
     margin-right: auto;
     margin-left: auto;
     padding-top: 15vh;
@@ -6447,7 +6463,8 @@ button
 {
     .dur-logo__promo
     {
-        height: 75vh;
+        height: 75vh; 
+        margin-top: 70px;
     }
 }
 @media (min-width: 992px)
@@ -7208,6 +7225,7 @@ button
 
 .logomotiv__promo
 {
+    margin-top: 40px; 
     margin-right: auto;
     margin-left: auto;
     padding: 40px 0 40px;
@@ -7216,8 +7234,15 @@ button
 
     background-color: #1a1a1a;
     background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg id=\'Layer_1\' data-name=\'Layer 1\' xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 9 9.003\'%3E%3Cdefs%3E%3Cstyle%3E.cls-1{fill:none;stroke:%23262626;stroke-miterlimit:10}%3C/style%3E%3C/defs%3E%3Ctitle%3Elogomotiv__pattern%3C/title%3E%3Cpath class=\'cls-1\' d=\'M.5 9.003V.5H9\'/%3E%3C/svg%3E');
-    background-repeat: repeat; 
+    background-repeat: repeat;
     background-size: 9px 9px;
+}
+@media (min-width: 768px)
+{
+    .logomotiv__promo
+    {
+        margin-top: 70px;
+    }
 }
 
 .logomotiv__promo-img-inner
@@ -7265,11 +7290,19 @@ button
 .logomotiv__case
 {
     min-width: 320px;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 15px;
+    padding-bottom: 50px; 
     padding-left: 15px;
+}
+@media (min-width: 768px)
+{
+    .logomotiv__case
+    {
+        padding-bottom: 100px;
+    }
 }
 
 .logomotiv__case-compare
@@ -7765,20 +7798,23 @@ button
             animation-name: pulse;
 }
 
-.daisy-bg
+@media (min-width: 768px)
 {
-    position: fixed;
-    z-index: -1; 
-    top: 122px;
-    left: 0;
+    .daisy-bg
+    {
+        position: fixed;
+        z-index: -1; 
+        top: 70px;
+        left: 0;
 
-    width: 100%;
-    height: 740px;
+        width: 100%;
+        height: 740px;
 
-    background-image: url('../img/daisy__subheder-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+        background-image: url('../img/daisy__subheder-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 .daisy img
@@ -7791,9 +7827,27 @@ button
 
 .daisy-subheader
 {
-    padding: 60px 0 160px;
+    position: relative;
+    top: 40px; 
+
+    padding: 60px 0 60px;
 
     color: #fff;
+    background-image: url('../img/daisy__subheder-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width: 768px)
+{
+    .daisy-subheader
+    {
+        top: 70px;
+
+        padding: 60px 0 160px; 
+
+        background: none;
+    }
 }
 .daisy-subheader .project__year
 {
@@ -7811,30 +7865,55 @@ button
 }
 .daisy-subheader__title
 {
-    font-size: 72px;
+    font-size: 36px;
     font-weight: normal;
 
-    margin: .5em 0 .4em; 
+    margin: .5em 15px .4em;
+}
+@media (min-width: 768px)
+{
+    .daisy-subheader__title
+    {
+        font-size: 72px;
 
-    text-align: center;
+        margin: .5em 0 .4em; 
+
+        text-align: center;
+    }
 }
 .daisy-subheader__title .wip
 {
-    font-size: 24px;
+    font-size: 12px;
 
     margin-top: 1em; 
 
     color: rgba(255, 255, 255, .5);
 }
+@media (min-width: 768px)
+{
+    .daisy-subheader__title .wip
+    {
+        font-size: 24px;
+    }
+}
 .daisy-subheader__flow
 {
-    font-size: 20px;
+    font-size: 16px;
+}
+@media (min-width: 768px)
+{
+    .daisy-subheader__flow
+    {
+        font-size: 20px;
+    }
 }
 .daisy-subheader__flow.important-icon
 {
     font-family: 'PT Serif', 'Times', 'Times New Roman', serif;
-    font-size: 16px; 
+    font-size: 12px;
     font-style: italic;
+
+    margin-left: 25px;
 }
 .daisy-subheader__flow.important-icon:before
 {
@@ -7843,54 +7922,120 @@ button
 
     opacity: .7;
 }
+@media (min-width: 768px)
+{
+    .daisy-subheader__flow.important-icon
+    {
+        font-size: 16px;
+
+        margin-left: 0;
+    }
+}
 
 .daisy-main
 {
     position: relative;
-    top: -125px;
 
     min-width: 320px;
     max-width: 1170px;
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-right: auto;
+    margin-bottom: -100px; 
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
 }
-.daisy-main__1200
+.daisy-main .project__flow
 {
     position: relative;
-    left: 20px;
-
-    overflow: hidden;
-
-    max-width: 940px;
-    height: auto;
-    margin: 0 auto;
-
-    border-radius: 3px 3px 7px 7px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    bottom: 150px;
 }
-.daisy-main__320
-{
-    position: absolute;
-    bottom: 700px;
-    left: 100px;
-
-    overflow: hidden;
-
-    max-width: 300px;
-    height: auto;
-
-    border-radius: 5px;
-    box-shadow: 20px 30px 60px rgba(0, 0, 0, .4);
-}
-.daisy-main__320 img
+.daisy-main img
 {
     display: block;
 
     max-width: 100%;
     height: auto;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+}
+.daisy-main .row
+{
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+.daisy-main__1200
+{
+    position: relative;
+
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+}
+.daisy-main__320
+{
+    position: relative;
+    top: -180px; 
+
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 70%;
+        -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
+}
+@media (min-width: 768px)
+{
+    .daisy-main
+    {
+        top: -56px;
+
+        margin-bottom: 0;
+    }
+    .daisy-main .project__flow
+    {
+        bottom: 0;
+    }
+    .daisy-main__1200
+    {
+        position: relative;
+        left: 20px;
+
+        overflow: hidden;
+
+        max-width: 940px;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+
+        border-radius: 3px 3px 7px 7px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    }
+    .daisy-main__320
+    {
+        position: absolute;
+        top: inherit;
+        bottom: 700px;
+        left: 100px;
+
+        overflow: hidden;
+
+        max-width: 300px;
+        height: auto;
+        padding: 0;
+
+        border-radius: 5px;
+        box-shadow: 20px 30px 60px rgba(0, 0, 0, .4);
+    }
 }
 
 .daisy-category

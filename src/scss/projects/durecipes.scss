@@ -3,6 +3,9 @@
 	&__promo {
 		background-color: #dc516b;
 		padding: 50px 0;
+		margin-top: 40px;
+
+		@media ($min-md) { margin-top: 70px;}
 	}
 
 	&__promo-logo {

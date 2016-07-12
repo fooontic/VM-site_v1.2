@@ -8,8 +8,8 @@ head
 body.dur-app
 	
 	:verbatim
-	include ../mixins/header.jade
-	+header('nested')
+	include ../mixins/header-new.jade
+	+header('durecipes_logo.html')
 
 	section.dur-app__promo
 		.container-fluid
@@ -84,3 +84,5 @@ body.dur-app
 
 	:verbatim
 	include ../components/footer.jade
+
+	script(src="../js/main.min.js")

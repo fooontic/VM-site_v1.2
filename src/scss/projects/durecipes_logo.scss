@@ -10,8 +10,9 @@
 		@include make-container();
 		position: relative;
 		overflow: hidden;
+		margin-top: 40px;
 
-		@media ($min-md) { height: 75vh;}
+		@media ($min-md) { margin-top: 70px; height: 75vh;}
 		@media ($min-lg) { height: 75vh;}
 		@media (min-width: 2000px)  { padding-top: 150px; height: 800px;}
 

@@ -10,10 +10,10 @@ head
 body.daisy
 	
 	:verbatim
-	include ../mixins/header.jade
-	+header('nested')
+	include ../mixins/header-new.jade
+	+header('tmsr.html')
 
-	.daisy-bg
+	.daisy-bg.hidden-xs-down
 	section.daisy-subheader
 		
 		h1.daisy-subheader__title Daisy Extreme
@@ -52,17 +52,17 @@ body.daisy
 	section.daisy-category
 		.container-fluid
 			.row
-				.col-xs-9.col-md-10
+				.col-xs-10
 					.daisy-category__img
 						img(src="../img/daisy__category.jpg", alt="")
 
-				.col-xs-3.col-md-2
+				.col-xs-2
 					.daisy-category__grid
 						img(src="../img/daisy__cat-grid.png", alt="")
 
 
 				.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
-					p.project__flow Для каждого вида спорта будет нарисована своя иконка в&nbsp;запоминающимся стиле. Чтобы&nbsp;просматривать страницу категорий было интереснее, я&nbsp;разработал простую сетку для&nbsp;компановки элементов. 
+					p.project__flow Для каждого вида спорта будет нарисована своя иконка в&nbsp;запоминающимся стиле. Чтобы просматривать страницу категорий было интереснее, я&nbsp;разработал простую сетку для компановки элементов. 
 
 
 	section.daisy-search
@@ -139,26 +139,26 @@ body.daisy
 
 
 				.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
-					p.project__flow Для визуального разнообразия блога придумал простую систему размещения статей в сетке страницы. 
+					p.project__flow Для визуального разнообразия блога придумал простую систему размещения статей в сетке страницы. 
 
 
 	section.daisy-graphics
 		.container-fluid
 			.row
 				.col-xs-12.col-md-6.col-lg-5.col-lg-offset-1
-					img(src="../img/daisy__graphics-1.png", alt="")
+					img.lazy(data-original="../img/daisy__graphics-1.png", alt="")
 
 				.col-xs-12.col-md-6.col-lg-5
-					img(src="../img/daisy__graphics-2.png", alt="")
+					img.lazy(data-original="../img/daisy__graphics-2.png", alt="")
 
 		.daisy-mistakes.switcher
 			.container-fluid
 				.row
 					.col-xs-12.col-lg-10.col-lg-offset-1
 						.daisy-mistakes__403.switchSelected#mis403
-							img(src="../img/daisy__403.jpg", alt="")							
+							img.lazy(data-original="../img/daisy__403.jpg", alt="")							
 						.daisy-mistakes__404#mis404
-							img(src="../img/daisy__404.jpg", alt="")
+							img.lazy(data-original="../img/daisy__404.jpg", alt="")
 
 
 					.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
@@ -170,7 +170,7 @@ body.daisy
 
 
 		.daisy-loader__inner
-			img(src="../img/daisy-logo__loader.gif", alt="")
+			img.lazy(data-original="../img/daisy-logo__loader.gif", alt="")
 
 
 
@@ -198,78 +198,93 @@ body.daisy
 		new WOW().init();
 
 
+
 		
-		// Bg follow to /////////////////////////////////
-		var windw = this;
+		$(document).ready(function(){
+	
+			// We need to turn it into a function.
+			// To apply the changes both on document ready and when we resize the browser.
+				
+			var ravenous = function() { 
 
-		$.fn.followTo = function ( pos ) {
-			var $this = this,
-				$window = $(windw);
+			// Set the matchMedia
 
-				$(window).scroll(function(e){
-					if ($window.scrollTop() > pos) {
-						$this.css({
-							position: 'absolute',
-							top: pos + bgTop
+				if (window.matchMedia('(min-width: 768px)').matches)
+				{
+						
+						// Slider /////////////////////////////////////
+						$(function() {
+							$('.slide-line').slideLine({
+								ratio: 0.99
+							});
 						});
 
-					} else {
-						$this.css({
-							position: 'fixed',
-							top: '122px'
-						})
-					}
-				})
-		}
-
-		var bgTop = 122;
-
-		$('.daisy-bg').followTo(379);
 
 
+						// Bg follow to /////////////////////////////////
+						var windw = this;
+
+						$.fn.followTo = function ( pos ) {
+							var $this = this,
+								$window = $(windw);
+
+								$(window).scroll(function(e){
+									if ($window.scrollTop() > pos) {
+										$this.css({
+											position: 'absolute',
+											top: pos + bgTop
+										});
+
+									} else {
+										$this.css({
+											position: 'fixed',
+											top: '70px'
+										})
+									}
+								})
+						}
+
+						var bgTop = 70;
+
+						$('.daisy-bg').followTo(370);
 
 
-		// Parallax ////////////////////////////////////
-		$.fn.parallax = function ( pos ){
-			var $this = this,
-				scrolled = $(window).scrollTop();
-			//- var scrolledMain = $(window).scrollTop(653);
 
-			$this.css('bottom', (pos + scrolled * 0.4) + 'px');
-		}
 
-		$(window).scroll(function(e){
-			$('.daisy-main__320').parallax(500);
+
+
+						// Parallax ////////////////////////////////////
+						$.fn.parallax = function ( pos ){
+							var $this = this,
+								scrolled = $(window).scrollTop();
+							//- var scrolledMain = $(window).scrollTop(653);
+
+							$this.css('bottom', (pos + scrolled * 0.4) + 'px');
+						}
+
+						$(window).scroll(function(e){
+							$('.daisy-main__320').parallax(500);
+						});
+
+
+						$(window).scroll(function(e){
+							if ($(window).scrollTop() > 3500) {
+								var scrolled = $(window).scrollTop();
+
+								$('.daisy-search__map').css('bottom', (-600 + scrolled / 4) + 'px');
+							}
+						});
+					
+				}
+
+
+
+
+			};
+
+			// Set the function to resize
+			$(window).resize(ravenous);
+			// Call the function
+			ravenous();  
+
 		});
-
-
-		$(window).scroll(function(e){
-			if ($(window).scrollTop() > 3500) {
-				var scrolled = $(window).scrollTop();
-
-				$('.daisy-search__map').css('bottom', (-600 + scrolled / 4) + 'px');
-			}
-		});
-
-
-		//- $(window).scroll(function(e){
-		//- 	$('.daisy-main').animate(
-		//- 		{
-		//- 			top: "-400px"
-		//- 		},
-		//- 	400);
-		//- });
-
-
-
-
-
-
-		// Slider /////////////////////////////////////
-		$(function() {
-			$('.slide-line').slideLine({
-				ratio: 0.99
-			});
-		});
-
-

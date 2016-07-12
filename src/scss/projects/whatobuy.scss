@@ -9,6 +9,8 @@
 		box-shadow: 0 10px 20px 0 fade-out(black, 0.85);
 		position: relative;
 		z-index: 5;
+		margin-top: 70px;
+		@media ($min-md) { margin-top: 70px;}
 
 		@media 
 		(min-width: $screen-lg-min) {

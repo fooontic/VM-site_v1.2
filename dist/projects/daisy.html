@@ -18,34 +18,34 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Serif:400i&amp;subset=cyrillic" rel="stylesheet" /> </head>
 
 <body class="daisy">
-  <div class="supheader">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 text-right"><a class="link link--white lang active">RU</a><a class="link link--white lang">EN</a></div>
-      </div>
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__sandwich"></a>
+      <a href="../index.html" class="header__logo"> <svg version="1.1" id="main-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="logo" width="122px" height="40.9166679px" viewBox="0 0 122 40.9166679" enable-background="new 0 0 122 40.9166679"
+          fill="#fff" xml:space="preserve">
+          	<g>
+          		<polygon points="21.8790302,40 41.9587288,40 62.0385284,1 41.9587288,1 	"/>
+          		<polygon points="62.0385284,40 82.1183319,40 102.1983261,1 82.1183319,1 	"/>
+          		<g>
+          			<polygon points="104.0096283,4.3382306 93.9697266,23.9472656 102.1983261,40 122.2782288,40 		"/>
+          		</g>
+          		<g>
+          			<polygon points="20.06213,36.85466 30.1019306,17.1427612 21.8736305,0.987061 1.7936296,0.987061 		"/>
+          		</g>
+          		<polygon points="60.2272301,36.85466 70.2670288,17.1428604 63.850029,4.543961 53.8102303,24.2555618 	"/>
+          	</g>			
+          </svg> </a>
+      <a href="tmsr.html" class="header__next"> <span class="header__next-word">Следующий</span></a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item"><a href="../index.html#projects">Проекты</a></li>
+          <li class="header__nav-item"><a href="http://fooontic.tumblr.com/">Блог</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-  <div class="header">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="nav__logo col-xs-10 col-sm-4 col-md-3">
-          <a href="../index.html"><img src="../img/logo.svg" alt="Vadik Matveev" class="logo img-responsive" /></a>
-        </div>
-        <div class="nav__blog col-xs-5 col-sm-1"><a href="http://fooontic.tumblr.com/" class="link">Блог</a></div>
-        <div class="nav__social col-xs-7 col-sm-4"><span class="header__social-me hidden-xs hidden-sm">Сижу в</span>
-          <a class="social-icon social-icon--behance"></a>
-          <a class="social-icon social-icon--twitter"></a>
-          <a class="social-icon social-icon--instagram"></a>
-          <a class="social-icon social-icon--facebook"></a>
-          <a class="social-icon social-icon--lastfm"></a>
-        </div>
-        <div class="nav__mail col-xs-7 col-xs-offset-5 col-sm-3 col-sm-offset-0 col-md-offset-1 col-lg-2 col-lg-offset-2">
-          <div class="header__mail-me"><span class="hidden-xs">Пишите мне</span><a href="mailto:fooontic@gmail.com" class="link mail">fooontic@gmail.com</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="daisy-bg"></div>
+    <div class="site-cache"></div>
+  </header>
+  <div class="daisy-bg hidden-xs-down"></div>
   <section class="daisy-subheader">
     <h1 class="daisy-subheader__title">Daisy Extreme<span class="wip">WIP</span></h1>
     <div class="container-fluid">
@@ -82,14 +82,14 @@
   <section class="daisy-category">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-9 col-md-10">
+        <div class="col-xs-10">
           <div class="daisy-category__img"><img src="../img/daisy__category.jpg" alt="" /></div>
         </div>
-        <div class="col-xs-3 col-md-2">
+        <div class="col-xs-2">
           <div class="daisy-category__grid"><img src="../img/daisy__cat-grid.png" alt="" /></div>
         </div>
         <div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-7 col-lg-offset-4 col-xl-8">
-          <p class="project__flow">Для каждого вида спорта будет нарисована своя иконка в&nbsp;запоминающимся стиле. Чтобы&nbsp;просматривать страницу категорий было интереснее, я&nbsp;разработал простую сетку для&nbsp;компановки элементов. </p>
+          <p class="project__flow">Для каждого вида спорта будет нарисована своя иконка в&nbsp;запоминающимся стиле. Чтобы просматривать страницу категорий было интереснее, я&nbsp;разработал простую сетку для компановки элементов. </p>
         </div>
       </div>
     </div>
@@ -166,7 +166,7 @@
           <div class="daisy-blog__grid"><img src="../img/daisy__blog-grid.png" alt="" /></div>
         </div>
         <div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-7 col-lg-offset-4 col-xl-8">
-          <p class="project__flow">Для визуального разнообразия блога придумал простую систему размещения статей в сетке страницы. </p>
+          <p class="project__flow">Для визуального разнообразия блога придумал простую систему размещения статей в сетке страницы. </p>
         </div>
       </div>
     </div>
@@ -174,16 +174,16 @@
   <section class="daisy-graphics">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-5 col-lg-offset-1"><img src="../img/daisy__graphics-1.png" alt="" /></div>
-        <div class="col-xs-12 col-md-6 col-lg-5"><img src="../img/daisy__graphics-2.png" alt="" /></div>
+        <div class="col-xs-12 col-md-6 col-lg-5 col-lg-offset-1"><img data-original="../img/daisy__graphics-1.png" alt="" class="lazy" /></div>
+        <div class="col-xs-12 col-md-6 col-lg-5"><img data-original="../img/daisy__graphics-2.png" alt="" class="lazy" /></div>
       </div>
     </div>
     <div class="daisy-mistakes switcher">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12 col-lg-10 col-lg-offset-1">
-            <div id="mis403" class="daisy-mistakes__403 switchSelected"><img src="../img/daisy__403.jpg" alt="" /></div>
-            <div id="mis404" class="daisy-mistakes__404"><img src="../img/daisy__404.jpg" alt="" /></div>
+            <div id="mis403" class="daisy-mistakes__403 switchSelected"><img data-original="../img/daisy__403.jpg" alt="" class="lazy" /></div>
+            <div id="mis404" class="daisy-mistakes__404"><img data-original="../img/daisy__404.jpg" alt="" class="lazy" /></div>
           </div>
           <div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-7 col-lg-offset-4 col-xl-8">
             <p class="project__flow switchNav">Приятные мелочи. Создан единый задорный стиль графики для сайта. На его основе сделаны веселые страницы <span id="for_mis403" class="switch active">403</span> и <span id="for_mis404" class="switch">404</span> ошибок.</p>
@@ -191,7 +191,7 @@
         </div>
       </div>
     </div>
-    <div class="daisy-loader__inner"><img src="../img/daisy-logo__loader.gif" alt="" /></div>
+    <div class="daisy-loader__inner"><img data-original="../img/daisy-logo__loader.gif" alt="" class="lazy" /></div>
   </section>
   <footer class="footer">
     <div class="container-fluid">
@@ -215,68 +215,77 @@
   <script>
     // WOW Animation ////////////////////////////////
     new WOW().init();
-    // Bg follow to /////////////////////////////////
-    var windw = this;
-    $.fn.followTo = function(pos)
+    $(document).ready(function()
     {
-      var $this = this,
-        $window = $(windw);
-      $(window).scroll(function(e)
+      // We need to turn it into a function.
+      // To apply the changes both on document ready and when we resize the browser.
+      var ravenous = function()
       {
-        if ($window.scrollTop() > pos)
+        // Set the matchMedia
+        if (window.matchMedia('(min-width: 768px)').matches)
         {
-          $this.css(
+          // Slider /////////////////////////////////////
+          $(function()
           {
-            position: 'absolute',
-            top: pos + bgTop
+            $('.slide-line').slideLine(
+            {
+              ratio: 0.99
+            });
+          });
+          // Bg follow to /////////////////////////////////
+          var windw = this;
+          $.fn.followTo = function(pos)
+          {
+            var $this = this,
+              $window = $(windw);
+            $(window).scroll(function(e)
+            {
+              if ($window.scrollTop() > pos)
+              {
+                $this.css(
+                {
+                  position: 'absolute',
+                  top: pos + bgTop
+                });
+              }
+              else
+              {
+                $this.css(
+                {
+                  position: 'fixed',
+                  top: '70px'
+                })
+              }
+            })
+          }
+          var bgTop = 70;
+          $('.daisy-bg').followTo(370);
+          // Parallax ////////////////////////////////////
+          $.fn.parallax = function(pos)
+          {
+            var $this = this,
+              scrolled = $(window).scrollTop();
+            //- var scrolledMain = $(window).scrollTop(653);
+            $this.css('bottom', (pos + scrolled * 0.4) + 'px');
+          }
+          $(window).scroll(function(e)
+          {
+            $('.daisy-main__320').parallax(500);
+          });
+          $(window).scroll(function(e)
+          {
+            if ($(window).scrollTop() > 3500)
+            {
+              var scrolled = $(window).scrollTop();
+              $('.daisy-search__map').css('bottom', (-600 + scrolled / 4) + 'px');
+            }
           });
         }
-        else
-        {
-          $this.css(
-          {
-            position: 'fixed',
-            top: '122px'
-          })
-        }
-      })
-    }
-    var bgTop = 122;
-    $('.daisy-bg').followTo(379);
-    // Parallax ////////////////////////////////////
-    $.fn.parallax = function(pos)
-    {
-      var $this = this,
-        scrolled = $(window).scrollTop();
-      //- var scrolledMain = $(window).scrollTop(653);
-      $this.css('bottom', (pos + scrolled * 0.4) + 'px');
-    }
-    $(window).scroll(function(e)
-    {
-      $('.daisy-main__320').parallax(500);
-    });
-    $(window).scroll(function(e)
-    {
-      if ($(window).scrollTop() > 3500)
-      {
-        var scrolled = $(window).scrollTop();
-        $('.daisy-search__map').css('bottom', (-600 + scrolled / 4) + 'px');
-      }
-    });
-    //- $(window).scroll(function(e){
-    //- 	$('.daisy-main').animate(
-    //- 		{
-    //- 			top: "-400px"
-    //- 		},
-    //- 	400);
-    //- });
-    // Slider /////////////////////////////////////
-    $(function()
-    {
-      $('.slide-line').slideLine(
-      {
-        ratio: 0.99
-      });
+      };
+      // Set the function to resize
+      $(window).resize(ravenous);
+      // Call the function
+      ravenous();
     });
   </script>
 </body>
