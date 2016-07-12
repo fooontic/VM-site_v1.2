@@ -1,7 +1,5 @@
 .animated {
-	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 }
 
@@ -934,40 +932,22 @@
 // 	animation-name: fadeIn;
 // }
 
-// @-webkit-keyframes fadeInDown {
-// 	0% {
-// 		opacity: 0;
-// 		-webkit-transform: translateY(-20px);
-// 		transform: translateY(-20px);
-// 	}
 
-// 	100% {
-// 		opacity: 1;
-// 		-webkit-transform: translateY(0);
-// 		transform: translateY(0);
-// 	}
-// }
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
 
-// @keyframes fadeInDown {
-// 	0% {
-// 		opacity: 0;
-// 		-webkit-transform: translateY(-20px);
-// 		-ms-transform: translateY(-20px);
-// 		transform: translateY(-20px);
-// 	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
-// 	100% {
-// 		opacity: 1;
-// 		-webkit-transform: translateY(0);
-// 		-ms-transform: translateY(0);
-// 		transform: translateY(0);
-// 	}
-// }
-
-// .fadeInDown {
-// 	-webkit-animation-name: fadeInDown;
-// 	animation-name: fadeInDown;
-// }
+.fadeInDown {
+	animation-name: fadeInDown;
+}
 
 // @-webkit-keyframes fadeInDownBig {
 // 	0% {
@@ -1089,40 +1069,22 @@
 // 	animation-name: fadeInRightBig;
 // }
 
-// @-webkit-keyframes fadeInUp {
-// 	0% {
-// 		opacity: 0;
-// 		-webkit-transform: translateY(20px);
-// 		transform: translateY(20px);
-// 	}
 
-// 	100% {
-// 		opacity: 1;
-// 		-webkit-transform: translateY(0);
-// 		transform: translateY(0);
-// 	}
-// }
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;		
+		transform: translateY(20px);
+	}
 
-// @keyframes fadeInUp {
-// 	0% {
-// 		opacity: 0;
-// 		-webkit-transform: translateY(20px);
-// 		-ms-transform: translateY(20px);
-// 		transform: translateY(20px);
-// 	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
-// 	100% {
-// 		opacity: 1;
-// 		-webkit-transform: translateY(0);
-// 		-ms-transform: translateY(0);
-// 		transform: translateY(0);
-// 	}
-// }
-
-// .fadeInUp {
-// 	-webkit-animation-name: fadeInUp;
-// 	animation-name: fadeInUp;
-// }
+.fadeInUp {
+	animation-name: fadeInUp;
+}
 
 // @-webkit-keyframes fadeInUpBig {
 // 	0% {
@@ -1394,75 +1356,39 @@
 // 	animation-name: fadeOutRightBig;
 // }
 
-// @-webkit-keyframes fadeOutUp {
-// 	0% {
-// 		opacity: 1;
-// 		-webkit-transform: translateY(0);
-// 		transform: translateY(0);
-// 	}
 
-// 	100% {
-// 		opacity: 0;
-// 		-webkit-transform: translateY(-20px);
-// 		transform: translateY(-20px);
-// 	}
-// }
+@keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 
-// @keyframes fadeOutUp {
-// 	0% {
-// 		opacity: 1;
-// 		-webkit-transform: translateY(0);
-// 		-ms-transform: translateY(0);
-// 		transform: translateY(0);
-// 	}
+	100% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+}
 
-// 	100% {
-// 		opacity: 0;
-// 		-webkit-transform: translateY(-20px);
-// 		-ms-transform: translateY(-20px);
-// 		transform: translateY(-20px);
-// 	}
-// }
+.fadeOutUp {
+	animation-name: fadeOutUp;
+}
 
-// .fadeOutUp {
-// 	-webkit-animation-name: fadeOutUp;
-// 	animation-name: fadeOutUp;
-// }
 
-// @-webkit-keyframes fadeOutUpBig {
-// 	0% {
-// 		opacity: 1;
-// 		-webkit-transform: translateY(0);
-// 		transform: translateY(0);
-// 	}
+@keyframes fadeOutUpBig {
+	0% {
+		opacity: 0;		
+		transform: translateY(0);
+	}
 
-// 	100% {
-// 		opacity: 0;
-// 		-webkit-transform: translateY(-2000px);
-// 		transform: translateY(-2000px);
-// 	}
-// }
+	100% {
+		opacity: 1;		
+		transform: translateY(-2000px);
+	}
+}
 
-// @keyframes fadeOutUpBig {
-// 	0% {
-// 		opacity: 1;
-// 		-webkit-transform: translateY(0);
-// 		-ms-transform: translateY(0);
-// 		transform: translateY(0);
-// 	}
-
-// 	100% {
-// 		opacity: 0;
-// 		-webkit-transform: translateY(-2000px);
-// 		-ms-transform: translateY(-2000px);
-// 		transform: translateY(-2000px);
-// 	}
-// }
-
-// .fadeOutUpBig {
-// 	-webkit-animation-name: fadeOutUpBig;
-// 	animation-name: fadeOutUpBig;
-// }
+.fadeOutUpBig {	
+	animation-name: fadeOutUpBig;
+}
 
 // @-webkit-keyframes flip {
 // 	0% {

@@ -46,7 +46,7 @@
     <div class="site-cache"></div>
   </header>
   <div class="daisy-bg hidden-xs-down"></div>
-  <section class="daisy-subheader">
+  <section class="daisy-subheader subheaderFadeIn">
     <h1 class="daisy-subheader__title">Daisy Extreme<span class="wip">WIP</span></h1>
     <div class="container-fluid">
       <div class="row">
@@ -62,9 +62,9 @@
         <div class="col-lg-2">
           <div class="project__madein">
             <p>Выражаю благодарность всем, кто работает над проектом вместе со мной: </p>
-            <p>Менеджер проекта: Артур&nbsp;Якубаускас</p>
-            <p>Программист: Антон&nbsp;Воробьев</p>
-            <p>Верстальщик: Александр&nbsp;Баландин</p>
+            <p class="project__team">Менеджер проекта: Артур&nbsp;Якубаускас</p>
+            <p class="project__team">Программист: Антон&nbsp;Воробьев</p>
+            <p class="project__team">Верстальщик: Александр&nbsp;Баландин</p>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
   <section class="daisy-main">
     <div class="row">
       <div class="daisy-main__1200"><img src="../img/daisy__main--1200.jpg" alt="" /></div>
-      <div class="daisy-main__320"><img src="../img/daisy__main--320.jpg" alt="" /></div>
+      <div class="daisy-main__320 wow fadeInUp"><img src="../img/daisy__main--320.jpg" alt="" /></div>
       <div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-7 col-lg-offset-4 col-xl-8">
         <p class="project__flow">Главная страница сайта рассказывает о сервисе и сообщает о горячих предложениях по региону пользователя. </p>
       </div>
@@ -99,7 +99,7 @@
       <div class="col-xs-12 col-md-8 col-md-offset-4">
         <div class="daisy-search__list"><img src="../img/daisy__list.jpg" alt="" /></div>
       </div>
-      <div class="daisy-search__map"><img src="../img/daisy__map.jpg" alt="" /></div>
+      <div class="daisy-search__map wow fadeInUp"><img src="../img/daisy__map.jpg" alt="" /></div>
       <div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-7 col-lg-offset-4 col-xl-8">
         <p class="project__flow">Выдачу предложений можно смотреть списком и на карте. </p>
       </div>
@@ -110,7 +110,9 @@
       <div class="col-xs-12 col-md-8 col-md-offset-4">
         <div class="daisy-business__offer"><img src="../img/daisy__offer.jpg" alt="" /></div>
       </div>
-      <div class="daisy-business__company wow fadeInLeft"><img src="../img/daisy__company.jpg" alt="" /></div>
+      <div class="col-xs-12 col-md-8">
+        <div class="daisy-business__company wow fadeInLeft"><img src="../img/daisy__company.jpg" alt="" /></div>
+      </div>
       <div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-7 col-lg-offset-4 col-xl-8">
         <p class="project__flow">Страницы компании и предложения. </p>
       </div>
@@ -119,13 +121,13 @@
   <section class="daisy-cabinet">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 col-md-2">
+        <div class="col-xs-12 col-md-3 col-lg-2">
           <h2 class="project__subtitle">Кабинет</h2> </div>
-        <div class="col-xs-12 col-md-7">
+        <div class="col-xs-12 col-md-9 col-lg-7">
           <p class="project__flow">Львиной долей проекта было проектирование личного кабинета. Личный кабинет простых пользователей состоит из избранного, моих покупок, уведомлений и возможности создать компанию. После добавления новой компании или принятия приглашения стать
             частью команды уже существующей компании, функционал личного кабинета расширяется до подачи и редактирование объявлений, учета бронирования, статистики продаж, настройки компании и прочее. </p>
         </div>
-        <div class="col-xs-12 col-md-3">
+        <div class="col-xs-12 col-md-offset-3 col-md-8 col-lg-offset-0 col-lg-3">
           <p class="project__flow"> <span class="daisy-cabinet__accent">Более 40 макетов </span>для 3-х разрешений. </p>
         </div>
       </div>
@@ -159,10 +161,10 @@
   <section class="daisy-blog">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-9 col-md-10">
+        <div class="col-xs-10">
           <div class="daisy-blog__img"><img src="../img/daisy__blog.jpg" alt="" /></div>
         </div>
-        <div class="col-xs-3 col-md-2">
+        <div class="col-xs-2">
           <div class="daisy-blog__grid"><img src="../img/daisy__blog-grid.png" alt="" /></div>
         </div>
         <div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-7 col-lg-offset-4 col-xl-8">
@@ -224,42 +226,6 @@
         // Set the matchMedia
         if (window.matchMedia('(min-width: 768px)').matches)
         {
-          // Slider /////////////////////////////////////
-          $(function()
-          {
-            $('.slide-line').slideLine(
-            {
-              ratio: 0.99
-            });
-          });
-          // Bg follow to /////////////////////////////////
-          var windw = this;
-          $.fn.followTo = function(pos)
-          {
-            var $this = this,
-              $window = $(windw);
-            $(window).scroll(function(e)
-            {
-              if ($window.scrollTop() > pos)
-              {
-                $this.css(
-                {
-                  position: 'absolute',
-                  top: pos + bgTop
-                });
-              }
-              else
-              {
-                $this.css(
-                {
-                  position: 'fixed',
-                  top: '70px'
-                })
-              }
-            })
-          }
-          var bgTop = 70;
-          $('.daisy-bg').followTo(370);
           // Parallax ////////////////////////////////////
           $.fn.parallax = function(pos)
           {
@@ -286,6 +252,75 @@
       $(window).resize(ravenous);
       // Call the function
       ravenous();
+    });
+    $(document).ready(function()
+    {
+      // We need to turn it into a function.
+      // To apply the changes both on document ready and when we resize the browser.
+      var ravenous = function()
+        {
+          // Set the matchMedia
+          if (window.matchMedia('(min-width: 992px)').matches)
+          {
+            // Bg follow to /////////////////////////////////
+            var windw = this;
+            $.fn.followTo = function(pos)
+            {
+              var $this = this,
+                $window = $(windw);
+              $(window).scroll(function(e)
+              {
+                if ($window.scrollTop() > pos)
+                {
+                  $this.css(
+                  {
+                    position: 'absolute',
+                    top: pos + bgTop
+                  });
+                }
+                else
+                {
+                  $this.css(
+                  {
+                    position: 'fixed',
+                    top: '70px'
+                  })
+                }
+              })
+            }
+            var bgTop = 70;
+            $('.daisy-bg').followTo(370);
+            $.fn.objFadeOut = function(pos)
+            {
+              var $this = this,
+                $window = $(windw);
+              $(window).scroll(function(e)
+              {
+                if ($window.scrollTop() > pos)
+                {
+                  $this.removeClass('subheaderFadeIn').addClass('subheaderFadeOut');
+                }
+                else
+                {
+                  $this.removeClass('subheaderFadeOut').addClass('subheaderFadeIn');
+                }
+              })
+            }
+            $('.daisy-subheader').objFadeOut(10);
+          }
+        }
+        // Set the function to resize
+      $(window).resize(ravenous);
+      // Call the function
+      ravenous();
+    });
+    // Slider /////////////////////////////////////
+    $(function()
+    {
+      $('.slide-line').slideLine(
+      {
+        ratio: 0.99
+      });
     });
   </script>
 </body>

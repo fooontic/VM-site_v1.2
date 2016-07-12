@@ -14,7 +14,7 @@ body.daisy
 	+header('tmsr.html')
 
 	.daisy-bg.hidden-xs-down
-	section.daisy-subheader
+	section.daisy-subheader.subheaderFadeIn
 		
 		h1.daisy-subheader__title Daisy Extreme
 			span.wip WIP
@@ -32,9 +32,9 @@ body.daisy
 				.col-lg-2
 					.project__madein
 						p Выражаю благодарность всем, кто работает над проектом вместе со мной: 
-						p Менеджер проекта: Артур&nbsp;Якубаускас
-						p Программист: Антон&nbsp;Воробьев
-						p Верстальщик: Александр&nbsp;Баландин
+						p.project__team Менеджер проекта: Артур&nbsp;Якубаускас
+						p.project__team Программист: Антон&nbsp;Воробьев
+						p.project__team Верстальщик: Александр&nbsp;Баландин
 
 
 	section.daisy-main
@@ -42,7 +42,7 @@ body.daisy
 			.daisy-main__1200
 				img(src="../img/daisy__main--1200.jpg", alt="")
 
-			.daisy-main__320
+			.daisy-main__320.wow.fadeInUp
 				img(src="../img/daisy__main--320.jpg", alt="")
 
 			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
@@ -71,7 +71,7 @@ body.daisy
 				.daisy-search__list
 					img(src="../img/daisy__list.jpg", alt="")
 
-			.daisy-search__map
+			.daisy-search__map.wow.fadeInUp
 				img(src="../img/daisy__map.jpg", alt="")
 
 			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
@@ -84,8 +84,9 @@ body.daisy
 				.daisy-business__offer
 					img(src="../img/daisy__offer.jpg", alt="")
 
-			.daisy-business__company.wow.fadeInLeft
-				img(src="../img/daisy__company.jpg", alt="")
+			.col-xs-12.col-md-8
+				.daisy-business__company.wow.fadeInLeft
+					img(src="../img/daisy__company.jpg", alt="")
 
 			.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
 				p.project__flow Страницы компании и предложения. 
@@ -94,13 +95,13 @@ body.daisy
 	section.daisy-cabinet
 		.container-fluid
 			.row
-				.col-xs-12.col-md-2
+				.col-xs-12.col-md-3.col-lg-2
 					h2.project__subtitle Кабинет
 
-				.col-xs-12.col-md-7
+				.col-xs-12.col-md-9.col-lg-7
 					p.project__flow Львиной долей проекта было проектирование личного кабинета. Личный кабинет простых пользователей состоит из избранного, моих покупок, уведомлений и возможности создать компанию. После добавления новой компании или принятия приглашения стать частью команды уже существующей компании, функционал личного кабинета расширяется до подачи и редактирование объявлений, учета бронирования, статистики продаж, настройки компании и прочее. 
 
-				.col-xs-12.col-md-3
+				.col-xs-12.col-md-offset-3.col-md-8.col-lg-offset-0.col-lg-3
 					p.project__flow 
 						span.daisy-cabinet__accent Более 40 макетов 
 						| для 3-х разрешений. 
@@ -129,11 +130,11 @@ body.daisy
 	section.daisy-blog
 		.container-fluid
 			.row
-				.col-xs-9.col-md-10
+				.col-xs-10
 					.daisy-blog__img
 						img(src="../img/daisy__blog.jpg", alt="")
 
-				.col-xs-3.col-md-2
+				.col-xs-2
 					.daisy-blog__grid
 						img(src="../img/daisy__blog-grid.png", alt="")
 
@@ -211,47 +212,7 @@ body.daisy
 
 				if (window.matchMedia('(min-width: 768px)').matches)
 				{
-						
-						// Slider /////////////////////////////////////
-						$(function() {
-							$('.slide-line').slideLine({
-								ratio: 0.99
-							});
-						});
-
-
-
-						// Bg follow to /////////////////////////////////
-						var windw = this;
-
-						$.fn.followTo = function ( pos ) {
-							var $this = this,
-								$window = $(windw);
-
-								$(window).scroll(function(e){
-									if ($window.scrollTop() > pos) {
-										$this.css({
-											position: 'absolute',
-											top: pos + bgTop
-										});
-
-									} else {
-										$this.css({
-											position: 'fixed',
-											top: '70px'
-										})
-									}
-								})
-						}
-
-						var bgTop = 70;
-
-						$('.daisy-bg').followTo(370);
-
-
-
-
-
+												
 
 						// Parallax ////////////////////////////////////
 						$.fn.parallax = function ( pos ){
@@ -287,4 +248,81 @@ body.daisy
 			// Call the function
 			ravenous();  
 
+		});
+
+
+		$(document).ready(function(){
+	
+			// We need to turn it into a function.
+			// To apply the changes both on document ready and when we resize the browser.
+				
+			var ravenous = function() { 
+
+			// Set the matchMedia
+
+				if (window.matchMedia('(min-width: 992px)').matches)
+				{
+
+					// Bg follow to /////////////////////////////////
+						var windw = this;
+
+						$.fn.followTo = function ( pos ) {
+							var $this = this,
+								$window = $(windw);
+
+								$(window).scroll(function(e){
+									if ($window.scrollTop() > pos) {
+										$this.css({
+											position: 'absolute',
+											top: pos + bgTop
+										});
+
+									} else {
+										$this.css({
+											position: 'fixed',
+											top: '70px'
+										})
+									}
+								})
+						}
+
+						var bgTop = 70;
+
+						$('.daisy-bg').followTo(370);
+
+
+						$.fn.objFadeOut = function ( pos ) {
+							var $this = this,
+								$window = $(windw);
+
+								$(window).scroll(function(e){
+									if ($window.scrollTop() > pos) {
+										$this.removeClass('subheaderFadeIn')
+										.addClass('subheaderFadeOut');
+
+									} else {
+										$this.removeClass('subheaderFadeOut')
+										.addClass('subheaderFadeIn');
+									}
+								})
+						}
+
+						$('.daisy-subheader').objFadeOut(10);
+				}
+
+			}
+				// Set the function to resize
+			$(window).resize(ravenous);
+			// Call the function
+			ravenous();  
+
+		});
+
+
+
+		// Slider /////////////////////////////////////
+		$(function() {
+			$('.slide-line').slideLine({
+				ratio: 0.99
+			});
 		});
