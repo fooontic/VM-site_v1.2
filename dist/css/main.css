@@ -4462,6 +4462,7 @@ button
     overflow: hidden;
 
     width: 100%;
+    max-height: 360px;
 }
 .projects__pic:before
 {
@@ -4505,6 +4506,18 @@ button
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+
+    opacity: 1;
+}
+.projects__pic:hover,
+.projects__pic--hover
+{
+    background-color: #000;
+}
+.projects__pic:hover img,
+.projects__pic--hover img
+{
+    opacity: .5;
 }
 .projects__pic:hover:after,
 .projects__pic--hover:after
@@ -4535,6 +4548,10 @@ button
     .projects__item--wide .projects__pic:before
     {
         padding-top: 47%;
+    }
+    .projects__item--wide img
+    {
+        width: 100%;
     }
 }
 @media (min-width: 992px)
@@ -6075,6 +6092,7 @@ button
     overflow: hidden;
 
     width: 100%;
+    max-height: 360px;
 }
 .projects__pic:before
 {
@@ -6118,6 +6136,18 @@ button
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+
+    opacity: 1;
+}
+.projects__pic:hover,
+.projects__pic--hover
+{
+    background-color: #000;
+}
+.projects__pic:hover img,
+.projects__pic--hover img
+{
+    opacity: .5;
 }
 .projects__pic:hover:after,
 .projects__pic--hover:after
@@ -6148,6 +6178,10 @@ button
     .projects__item--wide .projects__pic:before
     {
         padding-top: 47%;
+    }
+    .projects__item--wide img
+    {
+        width: 100%;
     }
 }
 @media (min-width: 992px)

@@ -283,12 +283,12 @@ html(lang="ru")
 
 
 
-		$('.projects__title').hover(
+		$('.projects__title a').hover(
 			function(){
-				$(this).siblings('.projects__pic').addClass('projects__pic--hover');
+				$(this).parent().siblings('.projects__pic').addClass('projects__pic--hover');
 			},
 			function(){
-				$(this).siblings('.projects__pic').removeClass('projects__pic--hover');
+				$(this).parent().siblings('.projects__pic').removeClass('projects__pic--hover');
 			}
 		);
 		
