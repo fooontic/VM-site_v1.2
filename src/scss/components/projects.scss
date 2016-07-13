@@ -144,13 +144,30 @@
 
 	&__item--draft {
 
+		@keyframes projects-draft {
+			0% {
+				transform: rotate(-20deg) translateX(-40%);
+			}
+
+			100% {
+				transform: rotate(-20deg) translateX(6%);
+			}
+		}
+
 		& .projects__pic:after {
 			background-image: url('../img/soon.png');
 			background-size: 250px 148px;
-			width: 200%;
-			height: 100%;
+			width: 300%;
+			height: 150%;
 			background-repeat: repeat;
-			transform: none;
+			transform: rotate(-20deg) translateX(-40%);
+			top: -150px;
+			left: -50%;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-fill-mode: both;
+			animation-timing-function: linear;
+			animation-name: projects-draft;
 		}
 
 		& .projects__pic:hover, & .projects__pic--hover {
@@ -195,3 +212,5 @@
 
 
 }
+
+

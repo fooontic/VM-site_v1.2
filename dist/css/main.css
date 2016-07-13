@@ -4568,18 +4568,60 @@ button
         padding-top: 48%;
     }
 }
+
+@-webkit-keyframes projects-draft
+{
+    0%
+    {
+        -webkit-transform: rotate(-20deg) translateX(-40%);
+                transform: rotate(-20deg) translateX(-40%);
+    }
+    100%
+    {
+        -webkit-transform: rotate(-20deg) translateX(6%);
+                transform: rotate(-20deg) translateX(6%);
+    }
+}
+
+@keyframes projects-draft
+{
+    0%
+    {
+        -webkit-transform: rotate(-20deg) translateX(-40%);
+                transform: rotate(-20deg) translateX(-40%);
+    }
+    100%
+    {
+        -webkit-transform: rotate(-20deg) translateX(6%);
+                transform: rotate(-20deg) translateX(6%);
+    }
+}
 .projects__item--draft .projects__pic:after
 {
-    width: 200%;
-    height: 100%;
+    top: -150px;
+    left: -50%;
 
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none; 
+    width: 300%;
+    height: 150%;
+
+    -webkit-transform: rotate(-20deg) translateX(-40%);
+        -ms-transform: rotate(-20deg) translateX(-40%);
+            transform: rotate(-20deg) translateX(-40%);
+    -webkit-animation-name: projects-draft;
+            animation-name: projects-draft; 
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 
     background-image: url('../img/soon.png');
     background-repeat: repeat;
     background-size: 250px 148px;
+
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 .projects__item--draft .projects__pic:hover,
 .projects__item--draft .projects__pic--hover
@@ -6221,18 +6263,46 @@ button
         padding-top: 48%;
     }
 }
+
+@keyframes projects-draft
+{
+    0%
+    {
+        -webkit-transform: rotate(-20deg) translateX(-40%);
+                transform: rotate(-20deg) translateX(-40%);
+    }
+    100%
+    {
+        -webkit-transform: rotate(-20deg) translateX(6%);
+                transform: rotate(-20deg) translateX(6%);
+    }
+}
 .projects__item--draft .projects__pic:after
 {
-    width: 200%;
-    height: 100%;
+    top: -150px;
+    left: -50%;
 
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none; 
+    width: 300%;
+    height: 150%;
+
+    -webkit-transform: rotate(-20deg) translateX(-40%);
+        -ms-transform: rotate(-20deg) translateX(-40%);
+            transform: rotate(-20deg) translateX(-40%);
+    -webkit-animation-name: projects-draft;
+            animation-name: projects-draft; 
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 
     background-image: url('../img/soon.png');
     background-repeat: repeat;
     background-size: 250px 148px;
+
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
 }
 .projects__item--draft .projects__pic:hover,
 .projects__item--draft .projects__pic--hover
