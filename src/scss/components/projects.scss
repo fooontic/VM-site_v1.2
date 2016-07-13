@@ -140,6 +140,26 @@
 			padding-top: 48%;
 		}
 	}
+
+
+	&__item--draft {
+
+		& .projects__pic:after {
+			background-image: url('../img/soon.png');
+			background-size: 250px 148px;
+			width: 200%;
+			height: 100%;
+			background-repeat: repeat;
+			transform: none;
+		}
+
+		& .projects__pic:hover, & .projects__pic--hover {
+			background-color: #fff;
+
+			& img { opacity: .7;}
+		}
+
+	}
 	/// PROJECTS PICTURES //////////////
 
 
