@@ -21,7 +21,7 @@
   <header class="header">
     <div class="header__container">
       <a href="#" class="header__sandwich"></a>
-      <a href="../index.html" class="header__logo"> <svg version="1.1" id="main-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="logo" width="122px" height="40.9166679px" viewBox="0 0 122 40.9166679" enable-background="new 0 0 122 40.9166679"
+      <a href="../" class="header__logo"> <svg version="1.1" id="main-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="logo" width="122px" height="40.9166679px" viewBox="0 0 122 40.9166679" enable-background="new 0 0 122 40.9166679"
           fill="#fff" xml:space="preserve">
           	<g>
           		<polygon points="21.8790302,40 41.9587288,40 62.0385284,1 41.9587288,1 	"/>
@@ -176,16 +176,16 @@
   <section class="daisy-graphics">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-5 col-lg-offset-1"><img data-original="../img/daisy__graphics-1.png" alt="" class="lazy" /></div>
-        <div class="col-xs-12 col-md-6 col-lg-5"><img data-original="../img/daisy__graphics-2.png" alt="" class="lazy" /></div>
+        <div class="col-xs-12 col-md-6 col-lg-5 col-lg-offset-1"><img src="../img/daisy__graphics-1.png" alt="" /></div>
+        <div class="col-xs-12 col-md-6 col-lg-5"><img src="../img/daisy__graphics-2.png" alt="" /></div>
       </div>
     </div>
     <div class="daisy-mistakes switcher">
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12 col-lg-10 col-lg-offset-1">
-            <div id="mis403" class="daisy-mistakes__403 switchSelected"><img data-original="../img/daisy__403.jpg" alt="" class="lazy" /></div>
-            <div id="mis404" class="daisy-mistakes__404"><img data-original="../img/daisy__404.jpg" alt="" class="lazy" /></div>
+            <div id="mis403" class="daisy-mistakes__403 switchSelected"><img src="../img/daisy__403.jpg" alt="" /></div>
+            <div id="mis404" class="daisy-mistakes__404"><img src="../img/daisy__404.jpg" alt="" /></div>
           </div>
           <div class="col-xs-12 col-md-10 col-md-offset-2 col-lg-7 col-lg-offset-4 col-xl-8">
             <p class="project__flow switchNav">Приятные мелочи. Создан единый задорный стиль графики для сайта. На его основе сделаны веселые страницы <span id="for_mis403" class="switch active">403</span> и <span id="for_mis404" class="switch">404</span> ошибок.</p>
@@ -193,7 +193,7 @@
         </div>
       </div>
     </div>
-    <div class="daisy-loader__inner"><img data-original="../img/daisy-logo__loader.gif" alt="" class="lazy" /></div>
+    <div class="daisy-loader__inner"><img src="../img/daisy-logo__loader.gif" alt="" /></div>
   </section>
   <footer class="footer">
     <div class="container-fluid">
@@ -217,6 +217,17 @@
   <script>
     // WOW Animation ////////////////////////////////
     new WOW().init();
+    // Slider /////////////////////////////////////
+    $(document).ready(function()
+    {
+      $(function()
+      {
+        $('.slide-line').slideLine(
+        {
+          ratio: 0.99
+        });
+      });
+    });
     $(document).ready(function()
     {
       // We need to turn it into a function.
@@ -306,21 +317,13 @@
                 }
               })
             }
-            $('.daisy-subheader').objFadeOut(10);
+            $('.daisy-subheader').objFadeOut(120);
           }
         }
         // Set the function to resize
       $(window).resize(ravenous);
       // Call the function
       ravenous();
-    });
-    // Slider /////////////////////////////////////
-    $(function()
-    {
-      $('.slide-line').slideLine(
-      {
-        ratio: 0.99
-      });
     });
   </script>
 </body>

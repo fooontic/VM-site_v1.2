@@ -4716,14 +4716,16 @@ button
 .projects-page .projects
 {
     margin-top: 40px; 
-    padding: 20px 0 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 @media (min-width: 768px)
 {
     .projects-page .projects
     {
         margin-top: 70px; 
-        padding: 40px 0 80px;
+        padding-top: 40px;
+        padding-bottom: 80px;
     }
 }
 
@@ -6410,14 +6412,16 @@ button
 .projects-page .projects
 {
     margin-top: 40px; 
-    padding: 20px 0 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 @media (min-width: 768px)
 {
     .projects-page .projects
     {
         margin-top: 70px; 
-        padding: 40px 0 80px;
+        padding-top: 40px;
+        padding-bottom: 80px;
     }
 }
 

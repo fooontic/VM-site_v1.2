@@ -212,11 +212,13 @@
 
 
 	&-page & {
-		padding: 20px 0 30px;
+		padding-top: 20px;
+		padding-bottom: 30px;
 		margin-top: 40px;
 
 		@media ($min-md) { 
-			padding: 40px 0 80px;
+			padding-top: 40px;
+			padding-bottom: 80px;
 			margin-top: 70px;
 		}
 	}

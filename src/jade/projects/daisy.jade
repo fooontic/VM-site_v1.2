@@ -147,19 +147,19 @@ body.daisy
 		.container-fluid
 			.row
 				.col-xs-12.col-md-6.col-lg-5.col-lg-offset-1
-					img.lazy(data-original="../img/daisy__graphics-1.png", alt="")
+					img(src="../img/daisy__graphics-1.png", alt="")
 
 				.col-xs-12.col-md-6.col-lg-5
-					img.lazy(data-original="../img/daisy__graphics-2.png", alt="")
+					img(src="../img/daisy__graphics-2.png", alt="")
 
 		.daisy-mistakes.switcher
 			.container-fluid
 				.row
 					.col-xs-12.col-lg-10.col-lg-offset-1
 						.daisy-mistakes__403.switchSelected#mis403
-							img.lazy(data-original="../img/daisy__403.jpg", alt="")							
+							img(src="../img/daisy__403.jpg", alt="")							
 						.daisy-mistakes__404#mis404
-							img.lazy(data-original="../img/daisy__404.jpg", alt="")
+							img(src="../img/daisy__404.jpg", alt="")
 
 
 					.col-xs-12.col-md-10.col-md-offset-2.col-lg-7.col-lg-offset-4.col-xl-8
@@ -171,7 +171,7 @@ body.daisy
 
 
 		.daisy-loader__inner
-			img.lazy(data-original="../img/daisy-logo__loader.gif", alt="")
+			img(src="../img/daisy-logo__loader.gif", alt="")
 
 
 
@@ -197,6 +197,16 @@ body.daisy
 		
 		// WOW Animation ////////////////////////////////
 		new WOW().init();
+
+
+		// Slider /////////////////////////////////////
+		$(document).ready(function() {
+			$(function() {
+				$('.slide-line').slideLine({
+					ratio: 0.99
+				});
+			});
+		});
 
 
 
@@ -307,7 +317,7 @@ body.daisy
 								})
 						}
 
-						$('.daisy-subheader').objFadeOut(10);
+						$('.daisy-subheader').objFadeOut(120);
 				}
 
 			}
@@ -318,11 +328,4 @@ body.daisy
 
 		});
 
-
-
-		// Slider /////////////////////////////////////
-		$(function() {
-			$('.slide-line').slideLine({
-				ratio: 0.99
-			});
-		});
+		
