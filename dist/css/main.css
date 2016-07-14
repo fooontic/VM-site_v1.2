@@ -3613,16 +3613,51 @@ button
     position: relative;
     top: -20px;
 
+    overflow: hidden; 
+
     -webkit-transition: all .2s;
-            transition: all .2s; 
+            transition: all .2s;
 
     opacity: 0;
+    color: #fff;
+}
+@media (min-width: 992px)
+{
+    .header__nav a:after
+    {
+        position: absolute;
+        z-index: -1;
+        bottom: -20px;
+        left: 50%;
+
+        width: 0;
+        height: 150%;
+
+        content: '';
+        -webkit-transition: width .4s ease;
+                transition: width .4s ease; 
+        -webkit-transform: translateX(-50%) rotate(30deg);
+            -ms-transform: translateX(-50%) rotate(30deg);
+                transform: translateX(-50%) rotate(30deg);
+
+        background-color: #3096bc;
+    }
 }
 .header__nav a:hover
 {
     text-decoration: none; 
 
-    color: #76c0dc !important;
+    color: #fff;
+}
+@media (min-width: 992px)
+{
+    .header__nav a:hover:after
+    {
+        width: 14px;
+
+        -webkit-transition: width .2s;
+                transition: width .2s;
+    }
 }
 .header__nav a:visited
 {
@@ -3636,10 +3671,6 @@ button
 
     color: #3096bc;
 }
-.header__nav a.active
-{
-    color: #3096bc;
-}
 @media (min-width: 768px)
 {
     .header__nav a
@@ -3651,6 +3682,17 @@ button
         padding: 0 15px;
 
         opacity: 1;
+    }
+}
+@media (min-width: 992px)
+{
+    .header__nav-item.active a:after
+    {
+        width: 14px;
+    }
+    .header__nav-item.active a:hover
+    {
+        cursor: default;
     }
 }
 .header__nav--expanded
@@ -4669,6 +4711,19 @@ button
     .projects__tags
     {
         font-size: 1em;
+    }
+}
+.projects-page .projects
+{
+    margin-top: 40px; 
+    padding: 20px 0 30px;
+}
+@media (min-width: 768px)
+{
+    .projects-page .projects
+    {
+        margin-top: 70px; 
+        padding: 40px 0 80px;
     }
 }
 
@@ -6350,6 +6405,19 @@ button
     .projects__tags
     {
         font-size: 1em;
+    }
+}
+.projects-page .projects
+{
+    margin-top: 40px; 
+    padding: 20px 0 30px;
+}
+@media (min-width: 768px)
+{
+    .projects-page .projects
+    {
+        margin-top: 70px; 
+        padding: 40px 0 80px;
     }
 }
 

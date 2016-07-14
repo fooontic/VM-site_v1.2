@@ -211,6 +211,17 @@
 	}
 
 
+	&-page & {
+		padding: 20px 0 30px;
+		margin-top: 40px;
+
+		@media ($min-md) { 
+			padding: 40px 0 80px;
+			margin-top: 70px;
+		}
+	}
+
+
 }
 
 

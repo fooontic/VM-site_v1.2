@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+html(lang="ru")
+	
+	head
+		//- title Дизайнер Вадик Матвеев
+
+		:verbatim
+		include ./mixins/head.jade
+		+head('Дизайнер Вадик Матвеев', 'root')
+
+		<meta property="og:image" content="img/my-face.jpg" /> 
+	
+
+	body.projects-page
+
+		:verbatim
+		include components/header-new--noarrow.jade
+
+		//- PROJECTS BLOCK //////////
+
+		:verbatim
+		include ./components/projects.jade
+
+		//- PROJECTS BLOCK //////////
+
+
+		//- FOOTER BLOCK //////////
+
+		:verbatim
+		include ./components/footer.jade
+
+		//- FOOTER BLOCK //////////
+
+
+
+
+	
+	
+	script(src="js/main.js")
+
+	script.
+
+		// WOW Animation ////////////////////////////////
+		new WOW({
+			offset: 30
+		}).init();
