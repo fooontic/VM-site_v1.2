@@ -1,0 +1,33 @@
+                            
+/* TEAM */
+                         
+	Designer and developer: Vadik Matveev 
+                            
+	Twitter: fooontic_
+                            
+	Location : Saint-Petersburg, Russia
+                         
+
+
+							
+/* THANKS */
+
+	School: Epic School (http://epixx.ru/)
+						
+                            
+
+                            
+/* SITE */
+
+                            
+	Language: Russian
+
+	Doctype:HTML5
+	                            
+	Standards: HTML5, CSS3
+
+	Dev: SASS, Jade, Gulp 
+	                            
+	Components: jQuery, Bootstrap 4, Vivus, Animate.css, WOW Animate, Ilya Birman Likely, TwentyTwenty, etc.
+
+	IDE: Sublime Text 3
