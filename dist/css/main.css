@@ -4667,15 +4667,15 @@ button
 {
     -webkit-animation-name: projects--half;
             animation-name: projects--half; 
-    -webkit-animation-duration: 2.5s;
-            animation-duration: 2.5s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
 }
 .projects__item--wide .projects__pic:after
 {
     -webkit-animation-name: projects--wide;
             animation-name: projects--wide; 
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
 }
 @media (min-width: 768px)
 {
@@ -6380,15 +6380,15 @@ button
 {
     -webkit-animation-name: projects--half;
             animation-name: projects--half; 
-    -webkit-animation-duration: 2.5s;
-            animation-duration: 2.5s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
 }
 .projects__item--wide .projects__pic:after
 {
     -webkit-animation-name: projects--wide;
             animation-name: projects--wide; 
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
 }
 @media (min-width: 768px)
 {
