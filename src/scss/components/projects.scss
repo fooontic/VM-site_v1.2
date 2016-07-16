@@ -60,6 +60,36 @@
 		overflow: hidden;
 		display: block;
 		// transition: background-color .6s;
+		
+		@keyframes projects--wide {
+			0% {
+				transform: rotate(-20deg) translateX(-40%);
+			}
+
+			100% {
+				transform: rotate(-20deg) translateX(4.5%);
+			}
+		}
+
+		@keyframes projects--half {
+			0% {
+				transform: rotate(-20deg) translateX(-40%);
+			}
+
+			100% {
+				transform: rotate(-20deg) translateX(5%);
+			}
+		}
+
+		@keyframes projects--small {
+			0% {
+				transform: rotate(-20deg) translateX(-40%);
+			}
+
+			100% {
+				transform: rotate(-20deg) translateX(6%);
+			}
+		}
 
 		&:before {
 			content: '';
@@ -70,16 +100,16 @@
 		&:after {
 			content: '';
 			position: absolute;
-			width: 100px;
-			height: 152px;
-			top: 50%;
-			left: 0;
-			background-image: svg-load('../img/projects__arrow.svg');
-			background-size: cover;
-			background-repeat: no-repeat;
-			opacity: 0;
-			transform: translate(-50%, -50%);
-			transition: opacity 0.3s 0.05s, left ease-out 0.5s;
+		// 	width: 100px;
+		// 	height: 152px;
+		// 	top: 50%;
+		// 	left: 0;
+		// 	background-image: svg-load('../img/projects__arrow.svg');
+		// 	background-size: cover;
+		// 	background-repeat: no-repeat;
+		// 	opacity: 0;
+		// 	transform: translate(-50%, -50%);
+		// 	transition: opacity 0.3s 0.05s, left ease-out 0.5s;
 		}
 
 		& img {
@@ -97,22 +127,48 @@
 		&:hover, &--hover {
 			
 			// border: 10px solid #11bfdd;
-			background-color: #000;	
+			background-color: #fff;	
 			// transition: background-color .1s;	
 
 			& img { 
-				opacity: .5;
+				opacity: .7;
 				// transition: opacity .3s;
 			}
 
 			&:after {
-				opacity: 1;
-				left: 50%;
-				transition: opacity 0.3s 0.05s, left ease-out 0.4s;
+				background-image: url('../img/look.png');
+				background-size: 250px 148px;
+				width: 300%;
+				height: 200%;
+				background-repeat: repeat;
+				transform: rotate(-20deg) translateX(-40%);
+				top: -300px;
+				left: -50%;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				animation-fill-mode: both;
+				animation-timing-function: linear;
 			}
+
+
 
 			
 		}
+	}
+
+	&__item--small &__pic:after { 
+		animation-duration: 2s;
+		animation-name: projects--small;
+	}
+
+	&__item--half &__pic:after { 
+		animation-duration: 2.5s;
+		animation-name: projects--half;
+	}
+
+	&__item--wide &__pic:after { 
+		animation-duration: 3s;
+		animation-name: projects--wide;
 	}
 
 	@media ($min-md) {
@@ -122,10 +178,7 @@
 		&__item--half &__pic:before { padding-top: 65%;}
 	}
 	@media ($min-md) {
-		&__item--wide &__pic:before { 
-			padding-top: 47%;
-		}
-
+		&__item--wide &__pic:before { padding-top: 47%;}
 		&__item--wide img { width: 100%;}
 	}
 
@@ -144,37 +197,17 @@
 
 	&__item--draft {
 
-		@keyframes projects-draft {
-			0% {
-				transform: rotate(-20deg) translateX(-40%);
-			}
-
-			100% {
-				transform: rotate(-20deg) translateX(6%);
-			}
-		}
+		
 
 		& .projects__pic:after {
 			background-image: url('../img/soon.png');
-			background-size: 250px 148px;
-			width: 300%;
-			height: 150%;
-			background-repeat: repeat;
-			transform: rotate(-20deg) translateX(-40%);
-			top: -150px;
-			left: -50%;
-			animation-duration: 2s;
-			animation-iteration-count: infinite;
-			animation-fill-mode: both;
-			animation-timing-function: linear;
-			animation-name: projects-draft;
 		}
 
-		& .projects__pic:hover, & .projects__pic--hover {
-			background-color: #fff;
+		// & .projects__pic:hover, & .projects__pic--hover {
+		// 	background-color: #fff;
 
-			& img { opacity: .7;}
-		}
+		// 	& img { opacity: .7;}
+		// }
 
 	}
 	/// PROJECTS PICTURES //////////////
