@@ -4623,12 +4623,12 @@ button
 .projects__pic:hover,
 .projects__pic--hover
 {
-    background-color: #fff;
+    background-color: #000;
 }
 .projects__pic:hover img,
 .projects__pic--hover img
 {
-    opacity: .7;
+    opacity: .5;
 }
 .projects__pic:hover:after,
 .projects__pic--hover:after
@@ -4719,6 +4719,16 @@ button
 .projects__item--draft .projects__pic:after
 {
     background-image: url('../img/soon.png');
+}
+.projects__item--draft .projects__pic:hover,
+.projects__item--draft .projects__pic--hover
+{
+    background-color: #fff;
+}
+.projects__item--draft .projects__pic:hover img,
+.projects__item--draft .projects__pic--hover img
+{
+    opacity: .7;
 }
 .projects__title
 {
@@ -6336,12 +6346,12 @@ button
 .projects__pic:hover,
 .projects__pic--hover
 {
-    background-color: #fff;
+    background-color: #000;
 }
 .projects__pic:hover img,
 .projects__pic--hover img
 {
-    opacity: .7;
+    opacity: .5;
 }
 .projects__pic:hover:after,
 .projects__pic--hover:after
@@ -6432,6 +6442,16 @@ button
 .projects__item--draft .projects__pic:after
 {
     background-image: url('../img/soon.png');
+}
+.projects__item--draft .projects__pic:hover,
+.projects__item--draft .projects__pic--hover
+{
+    background-color: #fff;
+}
+.projects__item--draft .projects__pic:hover img,
+.projects__item--draft .projects__pic--hover img
+{
+    opacity: .7;
 }
 .projects__title
 {

@@ -127,11 +127,11 @@
 		&:hover, &--hover {
 			
 			// border: 10px solid #11bfdd;
-			background-color: #fff;	
+			background-color: #000;	
 			// transition: background-color .1s;	
 
 			& img { 
-				opacity: .7;
+				opacity: .5;
 				// transition: opacity .3s;
 			}
 
@@ -203,11 +203,11 @@
 			background-image: url('../img/soon.png');
 		}
 
-		// & .projects__pic:hover, & .projects__pic--hover {
-		// 	background-color: #fff;
+		& .projects__pic:hover, & .projects__pic--hover {
+			background-color: #fff;
 
-		// 	& img { opacity: .7;}
-		// }
+			& img { opacity: .7;}
+		}
 
 	}
 	/// PROJECTS PICTURES //////////////
