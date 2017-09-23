@@ -29,10 +29,10 @@
 
 <body class="daisy">
   <header class="header">
-    <div class="header__container">
-      <a href="#" class="header__sandwich"></a>
-      <a href="../" class="header__logo"> <svg version="1.1" id="main-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="logo" width="122px" height="40.9166679px" viewBox="0 0 122 40.9166679" enable-background="new 0 0 122 40.9166679"
-          fill="#fff" xml:space="preserve">
+    <div class="header__container"><a href="#" class="header__sandwich"></a><a href="../" class="header__logo">
+          <svg version="1.1" id="main-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="logo"
+          	width="122px" height="40.9166679px" viewBox="0 0 122 40.9166679" enable-background="new 0 0 122 40.9166679" fill="#fff"
+          	xml:space="preserve">
           	<g>
           		<polygon points="21.8790302,40 41.9587288,40 62.0385284,1 41.9587288,1 	"/>
           		<polygon points="62.0385284,40 82.1183319,40 102.1983261,1 82.1183319,1 	"/>
@@ -44,8 +44,8 @@
           		</g>
           		<polygon points="60.2272301,36.85466 70.2670288,17.1428604 63.850029,4.543961 53.8102303,24.2555618 	"/>
           	</g>			
-          </svg> </a>
-      <a href="tmsr.html" class="header__next"> <span class="header__next-word">Следующий</span></a>
+          </svg>
+          </a><a href="tmsr.html" class="header__next"> <span class="header__next-word">Следующий</span></a>
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item"><a href="../projects.html">Проекты</a></li>
@@ -57,7 +57,7 @@
   </header>
   <div class="daisy-bg hidden-xs-down"></div>
   <section class="daisy-subheader subheaderFadeIn">
-    <h1 class="daisy-subheader__title">Daisy Extreme<span class="wip">WIP</span></h1>
+    <h1 class="daisy-subheader__title">Daisy Extreme </h1>
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-1 col-lg-offset-1">
@@ -67,7 +67,7 @@
           <p class="daisy-subheader__flow">Передо мной стояла задача нарисовать дизайн сайта для поиска активного отдыха. Diasy Extreme один из самых крупных проектов, над которым я работал. Функционал сервиса включает в себя: поиск площадок и предложений для спортивного отдыха, покупка
             билетов, сравнение предложений и отзывов, общение. Для компаний разрабатывается интерфейс добавления своих предложений и их настройка, учет бронирования и статистика. </p>
           <p class="daisy-subheader__flow">Сайт спроектирован адаптивным, чтобы комфортно пользоваться на компьютере, телефонах и планшетах. Помимо дизайн-макетов, я сверстал подобие UI-Kit основных элементов для легкого понимания плавности анимаций на сайте  в дальнейшем. </p>
-          <p class="daisy-subheader__flow important-icon">Проект в работе. Представленная ниже версия не окончательная и может дорабатываться. </p>
+          <p class="daisy-subheader__flow important-icon">Проект был приостановлен. Представленная ниже версия не окончательная. </p>
         </div>
         <div class="col-lg-2">
           <div class="project__madein">
@@ -132,7 +132,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-md-3 col-lg-2">
-          <h2 class="project__subtitle">Кабинет</h2> </div>
+          <h2 class="project__subtitle">Кабинет</h2>
+        </div>
         <div class="col-xs-12 col-md-9 col-lg-7">
           <p class="project__flow">Львиной долей проекта было проектирование личного кабинета. Личный кабинет простых пользователей состоит из избранного, моих покупок, уведомлений и возможности создать компанию. После добавления новой компании или принятия приглашения стать
             частью команды уже существующей компании, функционал личного кабинета расширяется до подачи и редактирование объявлений, учета бронирования, статистики продаж, настройки компании и прочее. </p>
@@ -217,7 +218,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-md-pull-6">
-          <div class="footer__copyright">© 2015</div>
+          <div class="footer__copyright">© 2015–2017</div>
           <div class="footer__mail">Пишите мне на <a class="link">fooontic@gmail.com</a></div>
         </div>
       </div>
@@ -279,58 +280,58 @@
       // We need to turn it into a function.
       // To apply the changes both on document ready and when we resize the browser.
       var ravenous = function()
+      {
+        // Set the matchMedia
+        if (window.matchMedia('(min-width: 992px)').matches)
         {
-          // Set the matchMedia
-          if (window.matchMedia('(min-width: 992px)').matches)
+          // Bg follow to /////////////////////////////////
+          var windw = this;
+          $.fn.followTo = function(pos)
           {
-            // Bg follow to /////////////////////////////////
-            var windw = this;
-            $.fn.followTo = function(pos)
+            var $this = this,
+              $window = $(windw);
+            $(window).scroll(function(e)
             {
-              var $this = this,
-                $window = $(windw);
-              $(window).scroll(function(e)
+              if ($window.scrollTop() > pos)
               {
-                if ($window.scrollTop() > pos)
+                $this.css(
                 {
-                  $this.css(
-                  {
-                    position: 'absolute',
-                    top: pos + bgTop
-                  });
-                }
-                else
-                {
-                  $this.css(
-                  {
-                    position: 'fixed',
-                    top: '70px'
-                  })
-                }
-              })
-            }
-            var bgTop = 70;
-            $('.daisy-bg').followTo(370);
-            $.fn.objFadeOut = function(pos)
-            {
-              var $this = this,
-                $window = $(windw);
-              $(window).scroll(function(e)
+                  position: 'absolute',
+                  top: pos + bgTop
+                });
+              }
+              else
               {
-                if ($window.scrollTop() > pos)
+                $this.css(
                 {
-                  $this.removeClass('subheaderFadeIn').addClass('subheaderFadeOut');
-                }
-                else
-                {
-                  $this.removeClass('subheaderFadeOut').addClass('subheaderFadeIn');
-                }
-              })
-            }
-            $('.daisy-subheader').objFadeOut(120);
+                  position: 'fixed',
+                  top: '70px'
+                })
+              }
+            })
           }
+          var bgTop = 70;
+          $('.daisy-bg').followTo(370);
+          $.fn.objFadeOut = function(pos)
+          {
+            var $this = this,
+              $window = $(windw);
+            $(window).scroll(function(e)
+            {
+              if ($window.scrollTop() > pos)
+              {
+                $this.removeClass('subheaderFadeIn').addClass('subheaderFadeOut');
+              }
+              else
+              {
+                $this.removeClass('subheaderFadeOut').addClass('subheaderFadeIn');
+              }
+            })
+          }
+          $('.daisy-subheader').objFadeOut(120);
         }
-        // Set the function to resize
+      }
+      // Set the function to resize
       $(window).resize(ravenous);
       // Call the function
       ravenous();
